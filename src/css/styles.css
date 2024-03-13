@@ -1,0 +1,55 @@
+:root {
+    --primary-color: rgb(0, 59, 74);
+    --secondary-color: rgb(255, 255, 255);
+    --secondary-color-alpha: rgba(255, 255, 255, 0.5);
+    --terciary-color: rgb(158, 157, 171);
+    --contraste-color: rgb(191, 12, 240);
+    --contraste-claro-color: rgb(229, 225, 254);
+    --bg-color: rgb(247, 247, 247);
+    --main-font: "Lato", sans-serif;
+    --secondary-font: "Noto Serif", serif;
+  }
+  /****************************
+  Estilos generales
+  *****************************/
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-family: var(--main-font);
+    font-size: 10px;
+  }
+  body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-size: 1.35rem;
+  }
+
+/****************************
+  INDEX - MENU PRINCIPAL
+  *****************************/
+
+  header.index {
+    height: 100px;
+    background-color: black;
+  }
+  header nav.menu_principal {
+    display: flex;
+    color: var(--secondary-color);
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    
+  }
+  header nav.menu_principal ul {
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  header nav.menu_principal ul:first-of-type li { 
+    margin: 0 3rem;
+  }
