@@ -1,55 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 :root {
-    --primary-color: rgb(0, 59, 74);
-    --secondary-color: rgb(255, 255, 255);
-    --secondary-color-alpha: rgba(255, 255, 255, 0.5);
-    --terciary-color: rgb(158, 157, 171);
-    --contraste-color: rgb(191, 12, 240);
-    --contraste-claro-color: rgb(229, 225, 254);
-    --bg-color: rgb(247, 247, 247);
-    --main-font: "Lato", sans-serif;
-    --secondary-font: "Noto Serif", serif;
-  }
-  /****************************
+  --primary-color: rgb(0, 59, 74);
+  --secondary-color: rgb(255, 255, 255);
+  --secondary-color-alpha: rgba(255, 255, 255, 0.5);
+  --terciary-color: rgb(158, 157, 171);
+  --contraste-color: rgb(191, 12, 240);
+  --contraste-claro-color: rgb(229, 225, 254);
+  --bg-color: rgb(247, 247, 247);
+  --bg-extremos: rgba(18, 18, 18, 1);
+ 
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Noto Serif", serif;
+}
+/****************************
   Estilos generales
   *****************************/
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font-family: var(--main-font);
-    font-size: 10px;
-  }
-  body {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    font-size: 1.35rem;
-  }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: var(--main-font);
+  font-size: 10px;
+  height: 100vh;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  font-size: 1.35rem;
+}
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
 /****************************
   INDEX - MENU PRINCIPAL
   *****************************/
 
-  header.index {
-    height: 100px;
-    background-color: black;
-  }
-  header nav.menu_principal {
-    display: flex;
-    color: var(--secondary-color);
-    justify-content: space-between;
-    height: 100%;
-    align-items: center;
-    
-  }
-  header nav.menu_principal ul {
-    display: flex;
-    list-style: none;
-    text-transform: uppercase;
-  }
+header.index {
+  height: 10rem;
+  
+  background-color: var(--bg-extremos);
+  border-bottom: 1px solid var(--bg-color);
 
-  header nav.menu_principal ul:first-of-type li { 
-    margin: 0 3rem;
-  }
+}
+header nav.menu_principal {
+  display: flex;
+  color: var(--secondary-color);
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  margin: 0 3rem;
+}
+header nav.menu_principal ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+header nav.menu_principal ul {
+  padding: 0 1rem;
+}
+header nav.menu_principal ul:first-of-type li {
+  margin: 0 3rem;
+  border: 1px solid transparent;
+}
+header nav.menu_principal ul:first-of-type li:hover {
+  color: yellow;
+  border-bottom: 1px solid yellow;
+}
+header nav.menu_principal ul:last-child li {
+  margin: 0 0.5rem;
+}
+
+div.divlogo a {
+  /*  background-color: orange; */
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+div.divlogo p {
+  font-size: 3rem;
+}
+/* .divlogo {
+} */
+/* main img {
+  width: 100vw;
+} */
+main {
+  background-color: black;
+  background-image: url("/src/assets/fondo_portada.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+div.fondo_portada {
+  background-color: rgba(255, 255, 255, 0.6);
+ /*  width: 40vw;
+  height: 50vh;
+  position: relative; */
+  grid-row: 2/6;
+  grid-column: 9/12;
+}
+div.fondo_portada > p {
+   font-size: 3rem;
+}
+/****************************
+  INDEX - FOOTER
+  *****************************/
+footer {
+  background-color: var(--bg-extremos);
+  min-height: 15rem;
+  /* height: 25%; */
+}
+/****************************
+  CLASES
+*****************************/
+
+.fa-brands:hover {
+  color: yellow;
+}
+.logo {
+  width: 8rem;
+  height: 8rem;
+}
