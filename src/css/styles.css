@@ -25,7 +25,7 @@
 html {
   font-family: var(--main-font);
   font-size: 10px;
-  height: 100vh;
+  /* height: 100vh; */
 }
 body {
   background-color: var(--bg-color);
@@ -42,9 +42,11 @@ a {
 
 header.index {
   height: 10rem;
-  
+  width: 100%;
   background-color: var(--bg-extremos);
   border-bottom: 1px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
 
 }
 header nav.menu_principal {
@@ -54,6 +56,9 @@ header nav.menu_principal {
   height: 100%;
   align-items: center;
   margin: 0 3rem;
+  max-width: 1170px;
+  width: 100%;
+ 
 }
 header nav.menu_principal ul {
   display: flex;
@@ -67,6 +72,8 @@ header nav.menu_principal ul {
 header nav.menu_principal ul:first-of-type li {
   margin: 0 3rem;
   border: 1px solid transparent;
+  padding: 0.5rem 0rem;
+  transition: all 0.5s ease-out;
 }
 header nav.menu_principal ul:first-of-type li:hover {
   color: yellow;
@@ -132,3 +139,4 @@ footer {
   width: 8rem;
   height: 8rem;
 }
+
