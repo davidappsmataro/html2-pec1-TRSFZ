@@ -1,26 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-  --primary-color: rgb(0, 59, 74);
-  --secondary-color: rgb(255, 255, 255);
+  --primary-color: rgb(256, 256, 256);
+  --secondary-color: rgba(158, 139, 94, 1);
   --secondary-color-alpha: rgba(255, 255, 255, 0.5);
-  --terciary-color: rgb(158, 157, 171);
+  --terciary-color: rgba(91, 91, 91, 1);
+  --cuaternary-color: rgba(255, 45, 48, 1);
   --contraste-color: rgb(191, 12, 240);
   --contraste-claro-color: rgb(229, 225, 254);
   --bg-color: rgb(247, 247, 247);
-  --bg-extremos: rgba(18, 18, 18, 1);
- 
+  --bg-secondary-color: rgba(20, 20, 20, 1);
+  --bg-terciary-color: rgba(35, 35, 35, 1);
+  --bg-extremos: rgba(0, 0, 0, 1);
+
   --main-font: "Roboto", sans-serif;
-  --secondary-font: "Noto Serif", serif;
+  --secondary-font: "Inspiration", serif;
 }
 /****************************
   Estilos generales
   *****************************/
 
-* {
-  box-sizing: border-box;
-  margin: 0;
+*,
+*:before,
+*:after {
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 html {
   font-family: var(--main-font);
@@ -28,13 +33,13 @@ html {
   /* height: 100vh; */
 }
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-secondary-color);
   color: var(--primary-color);
   font-size: 1.35rem;
 }
 a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 /****************************
   INDEX - MENU PRINCIPAL
@@ -44,14 +49,198 @@ header.index {
   height: 10rem;
   width: 100%;
   background-color: var(--bg-extremos);
-  border-bottom: 1px solid var(--bg-color);
+  /* border-bottom: 1px solid var(--primary-color); */
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
+}
+header ul.smedia_menu {
+  display: none;
+}
+nav.menu_principal {
+  display: flex;
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+}
+header ul.opciones_menu {
+  display: none;
+  list-style: none;
+  text-transform: uppercase;
+  flex-direction: column;
+  /*  position: relative; */
+  position: absolute;
+  top: 10rem;
+  left: 0rem;
+  width: 80%;
+
+  background-color: var(--bg-color);
+  padding-bottom: 1rem;
+  z-index: 100;
+}
+
+header ul.opciones_menu > li {
+  /* padding: 1rem 2rem; */
+  margin: 0rem 2rem;
+  border-bottom: 1px solid var(--secondary-color);
+  /*  background-color: orange; */
+}
+/* header ul.opciones_menu > li:not(:last-child) {
+  
+  border-bottom: 1px solid var(--secondary-color);
+  
+  
+}
+*/
+header ul.opciones_menu > li > a {
+  color: var(--secondary-color);
+  display: block;
+  /* background-color: pink; */
+  padding: 1rem 2rem;
+}
+header ul.opciones_menu > li > a:hover {
+  color: var(--terciary-color);
+}
+
+div.divlogo a {
+  display: flex;
+  align-items: center;
+}
+
+div.name_web p {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+}
+div.name_web a p:last-child {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--cuaternary-color);
+}
+div.name_web {
+  display: none;
+}
+
+button.bburguer {
+  color: var(--primary-color);
+  background-color: var(--bg-extremos);
+  border: none;
+  padding: 2rem;
+}
+button.bburguer > i.fa-circle-xmark {
+  display: none;
+}
+
+main {
+  background-color: var(--bg-secondary-color);
+  height: calc(100vh - 15rem);
+}
+
+main div.ultimas_noticias {
+  margin: 15rem 3rem 0rem 3rem;
+  height: 15rem;
+  background-color: var(--bg-terciary-color);
+}
+
+main.main_index {
+  background-color: black;
+  background-image: url("/src/assets/portadadesktop.jpg");
+  background-position: right 65% top 0rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+button.bgeneral {
+  background-color: var(--cuaternary-color);
+  border-radius: 5px;
+  border: none;
+  color: var(--bg-color);
+  font-size: 1.7rem;
+  height: 4.5rem;
+  margin-top: 4rem;
+  width: 100%;
+  grid-row: 5/6;
+  grid-column: 2/5;
 
 }
-header nav.menu_principal {
+button.bgeneral:hover {
+  background-color: var(--bg-secondary-color);
+}
+/****************************
+  INDEX - FOOTER
+  *****************************/
+footer {
+  background-color: var(--bg-extremos);
+  min-height: 15rem;
+  /* height: 25%; */
+}
+footer ul.smedia_menu_footer {
   display: flex;
-  color: var(--secondary-color);
+  width: 100%;
+  justify-content: center;
+  padding-top: 5rem;
+}
+footer ul.smedia_menu_footer li {
+  display: flex;
+  padding: 1rem;
+}
+footer ul.smedia_menu_footer li a {
+  color: var(--terciary-color);
+}
+footer ul.legal {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+footer ul.legal li {
+  margin: 0.5rem 0rem;
+}
+footer ul.legal li a {
+  color: var(--terciary-color);
+  text-transform: uppercase;
+}
+footer ul.legal li a:hover {
+  color: var(--cuaternary-color);
+}
+footer > p {
+  text-align: center;
+  padding-bottom: 5rem;
+  color: var(--cuaternary-color);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+/****************************
+    CLASES
+  *****************************/
+.container {
+  width: 90%;
+}
+.fa-brands:hover {
+  color: var(--cuaternary-color);
+}
+.logo {
+  width: 8rem;
+  height: 8rem;
+}
+
+@media (min-width: 335px) {
+  div.name_web {
+    display: block;
+  }
+}
+/* header nav.menu_principal {
+  display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
@@ -84,20 +273,21 @@ header nav.menu_principal ul:last-child li {
 }
 
 div.divlogo a {
-  /*  background-color: orange; */
+  
   text-align: center;
   display: flex;
   align-items: center;
 }
 div.divlogo p {
   font-size: 3rem;
-}
+} */
 /* .divlogo {
 } */
 /* main img {
   width: 100vw;
 } */
-main {
+
+/* main {
   background-color: black;
   background-image: url("/src/assets/fondo_portada.jpg");
   background-position: center;
@@ -111,32 +301,11 @@ main {
 }
 div.fondo_portada {
   background-color: rgba(255, 255, 255, 0.6);
- /*  width: 40vw;
-  height: 50vh;
-  position: relative; */
+ 
   grid-row: 2/6;
   grid-column: 9/12;
 }
 div.fondo_portada > p {
-   font-size: 3rem;
-}
-/****************************
-  INDEX - FOOTER
-  *****************************/
-footer {
-  background-color: var(--bg-extremos);
-  min-height: 15rem;
-  /* height: 25%; */
-}
-/****************************
-  CLASES
-*****************************/
-
-.fa-brands:hover {
-  color: yellow;
-}
-.logo {
-  width: 8rem;
-  height: 8rem;
-}
-
+ 
+  font-size: 3rem;
+} */
