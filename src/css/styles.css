@@ -43,6 +43,11 @@ a {
   text-decoration: none;
   color: var(--primary-color);
 }
+article h2 {
+  font-weight: 300;
+  
+  color: var(--terciary-color);
+}
 /****************************
      MENU PRINCIPAL
 *****************************/
@@ -102,6 +107,7 @@ header ul.opciones_menu > li > a {
   /* background-color: pink; */
   padding: 2rem 2rem;
   font-size: 1.6rem;
+  font-weight: bold;
 }
 header ul.opciones_menu > li > a:hover {
   color: var(--terciary-color);
@@ -140,10 +146,23 @@ main {
   /* height: calc(100vh - 15rem); */
 }
 
-main div.ultimas_noticias {
+/* main div.ultimas_noticias {
   margin: 15rem 3rem 0rem 3rem;
   height: 15rem;
   background-color: var(--bg-terciary-color);
+} */
+/* div contenedor del card */
+
+
+main.categoria div.container h1 + article {
+  margin-top: 3rem;
+}
+main.categoria article:not(:first-child) {
+  margin-top: 3rem;
+}
+main.categoria h1 {
+  text-align: center;
+  font-weight: 100;
 }
 
 main.index {
@@ -159,25 +178,50 @@ main.index {
   grid-template-rows: repeat(8, 1fr);
 }
 main.categoria {
-  padding-top: calc(var(--alto-header) + 5rem);
+  padding-top: calc(var(--alto-header) + 1rem);
 }
 
-button.bgeneral {
-  background-color: var(--cuaternary-color);
-  border-radius: 5px;
-  border: none;
-  color: var(--bg-color);
-  font-size: 1.7rem;
-  height: 4.5rem;
-  margin-top: 4rem;
+/****************************
+   CARD
+*****************************/
+
+div.card_container {
+  
+  min-height: 40rem;
+  background-color: var(--bg-terciary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  grid-row: 5/6;
-  grid-column: 2/5;
+  margin-top: 1rem;
+/*   background-color: orange; */
+ 
+}
 
+div.card_image, div.card_content{
+  width: 92%;
 }
-button.bgeneral:hover {
-  background-color: var(--bg-secondary-color);
+div.card_image {
+  margin-top: 1.5rem;
 }
+div.card_content {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+div.card_content p {
+  margin-top: 0.8rem;
+}
+div.card_content .bgeneral {
+  width: 40%;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  
+}
+
+
+
 /****************************
    FOOTER
 *****************************/
@@ -231,6 +275,9 @@ footer > p {
   *****************************/
 .container {
   width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+
 }
 .fa-brands:hover {
   color: var(--cuaternary-color);
@@ -238,6 +285,26 @@ footer > p {
 .logo {
   width: 8rem;
   height: 8rem;
+}
+.img_fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.bgeneral {
+  background-color: var(--cuaternary-color);
+  border-radius: 5px;
+  border: none;
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  height: 3.5rem;
+  /* margin-top: 4rem; */
+  width: 100%;
+  
+
+}
+.bgeneral:hover {
+  background-color: var(--terciary-color);
 }
 
 @media (min-width: 335px) {
