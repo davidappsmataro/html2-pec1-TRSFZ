@@ -9,92 +9,29 @@
       content="Bienvenido al Fan Zone de The Rolling Stones. Podrás encontrar todas las notidicas de tu grupo preferido."
     />
     <title>Home | Fan zone</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="/src/assets/favicon3.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/src/assets/favicon3.png"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- <script type="module" src="app.ts" /> -->
+   
   </head>
   <body>
-    <header class="index">
-      <nav class="menu_principal">
-        <div class="divlogo">
-          <a href="index.html"
-            ><img
-              class="logo"
-              src="./assets/logo.png"
-              alt="Logotipo de Los Rolling Stones"
-            />
-          </a>
-        </div>
-        <div class="name_web">
-          <a href="index.html">
-            <p>The Rolling Stones</p>
-            <p>Fan Zone</p>
-          </a>
-        </div>
-        <ul class="opciones_menu">
-          <li><a href="/src/categoria.html">Categoría</a></li>
-          <li><a href="#">Presentación</a></li>
-          <li><a href="#">Enlaces</a></li>
-        </ul>
-        <ul class="smedia_menu">
-          <li>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-          </li>
-        </ul>
-        <button class="bburguer">
-          <i class="fa-solid fa-bars fa-2x on"></i>
-          <i class="fa-regular fa-circle-xmark fa-2x"></i>
-        </button>
-      </nav>
-    </header>
+    <include src="./src/components/header.html"></include>
     <main class="main_index">
       <!-- <div class="ultimas_noticias">
          
       </div> -->
       <!--  <img src="/src/assets/fondo_portada.jpg" alt="En concierto"/> -->
-       <!--  <img src="/src/assets/portadamovil.jpg" alt="En concierto"/> -->
+      <!--  <img src="/src/assets/portadamovil.jpg" alt="En concierto"/> -->
       <!-- <div class="fondo_portada">
         <p>Próxima gira 2024</p>
       </div> -->
       <button class="bgeneral">pulsar</button>
     </main>
-    <footer>
-      <ul class="smedia_menu_footer">
-        <li>
-          <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-brands fa-youtube fa-2x"></i></a>
-        </li>
-      </ul>
-      <ul class="legal">
-        <li><a href="#">Aviso Legal</a></li>
-        <li><a href="#">Política de Cookies</a></li>
-        <li><a href="#">Política de privacidad</a></li>
-      </ul>
-      <p>2024 &copy; David Pecharromán López</p>
-    </footer>
-    <!-- <h1>Hello, World!</h1>
-    <include src="./src/header.html"></include> -->
-    <script
-      src="https://kit.fontawesome.com/fa121e3cca.js"
-      crossorigin="anonymous"
-    ></script>
-    <script type="module" src="./js/index.js"></script>
+    <include src="./src/components/footer.html"></include>
+    <include src="./src/components/scripts.html"></include>
   </body>
 </html>
