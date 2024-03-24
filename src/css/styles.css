@@ -45,7 +45,7 @@ a {
 }
 article h2 {
   font-weight: 300;
-  
+
   color: var(--terciary-color);
 }
 /****************************
@@ -62,6 +62,10 @@ header {
   position: fixed;
   top: 0;
 }
+
+header ul.smedia_menu li {
+   margin: 0rem 0.5rem;
+}
 header ul.smedia_menu {
   display: none;
 }
@@ -70,7 +74,8 @@ nav.menu_principal {
   color: var(--primary-color);
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
+  margin-left: 2rem;
 }
 header ul.opciones_menu {
   display: none;
@@ -94,13 +99,7 @@ header ul.opciones_menu > li {
   border-bottom: 1px solid var(--secondary-color);
   /*  background-color: orange; */
 }
-/* header ul.opciones_menu > li:not(:last-child) {
-  
-  border-bottom: 1px solid var(--secondary-color);
-  
-  
-}
-*/
+
 header ul.opciones_menu > li > a {
   color: var(--secondary-color);
   display: block;
@@ -118,17 +117,24 @@ div.divlogo a {
   align-items: center;
 }
 
-div.name_web p {
+div.name_web p, div.name_web_in_logo p {
   font-family: var(--secondary-font);
   font-size: 3rem;
 }
-div.name_web a p:last-child {
+div.name_web a p:last-child, div.name_web_in_logo p:last-child {
   font-size: 2.5rem;
   text-align: center;
   color: var(--cuaternary-color);
 }
-div.name_web {
+div.name_web, div.name_web_in_logo {
   display: none;
+}
+
+
+@media (min-width: 350px) {
+  div.name_web {
+    display: block;
+  }
 }
 
 button.bburguer {
@@ -136,6 +142,7 @@ button.bburguer {
   background-color: var(--bg-extremos);
   border: none;
   padding: 2rem;
+  cursor: pointer;
 }
 button.bburguer > i.fa-circle-xmark {
   display: none;
@@ -146,25 +153,9 @@ main {
   /* height: calc(100vh - 15rem); */
 }
 
-/* main div.ultimas_noticias {
-  margin: 15rem 3rem 0rem 3rem;
-  height: 15rem;
-  background-color: var(--bg-terciary-color);
-} */
-/* div contenedor del card */
-
-
-main.categoria div.container h1 + article {
-  margin-top: 3rem;
-}
-main.categoria article:not(:first-child) {
-  margin-top: 3rem;
-}
-main.categoria h1 {
-  text-align: center;
-  font-weight: 100;
-}
-
+/****************************
+     PAGINA INDEX
+*****************************/
 main.index {
   background-color: black;
   background-image: url("/src/assets/portadadesktop.jpg");
@@ -177,16 +168,75 @@ main.index {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(8, 1fr);
 }
+/****************************
+     PAGINA CATEGORIA
+*****************************/
+
+/* div contenedor del card */
+main.categoria div.container h1 + article {
+  margin-top: 3rem;
+}
+main.categoria article:not(:first-child) {
+  margin-top: 3rem;
+}
+main.categoria h1 {
+  text-align: center;
+  font-weight: 100;
+}
+
 main.categoria {
   padding-top: calc(var(--alto-header) + 1rem);
 }
+/****************************
+     PAGINA PRESENTACION
+*****************************/
 
+main.presentacion {
+  background-color: var(--bg-terciary-color);
+  height: 100vh;
+  width: 100%;
+}
+main.presentacion h1 {
+  padding-top: calc(var(--alto-header) + 1rem);
+  color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+}
+/****************************
+     PAGINA HISTORIA
+*****************************/
+
+main.historia {
+  background-color: var(--bg-terciary-color);
+  height: 100vh;
+  width: 100%;
+}
+main.historia h1 {
+  padding-top: calc(var(--alto-header) + 1rem);
+  color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+}
+/****************************
+     PAGINA ENLACES
+*****************************/
+
+main.enlaces {
+  background-color: var(--bg-terciary-color);
+  height: 100vh;
+  width: 100%;
+}
+main.enlaces h1 {
+  padding-top: calc(var(--alto-header) + 1rem);
+  color: var(--primary-color);
+  width: 100%;
+  text-align: center;
+}
 /****************************
    CARD
 *****************************/
 
 div.card_container {
-  
   min-height: 40rem;
   background-color: var(--bg-terciary-color);
   display: flex;
@@ -194,11 +244,11 @@ div.card_container {
   align-items: center;
   width: 100%;
   margin-top: 1rem;
-/*   background-color: orange; */
- 
+  /*   background-color: orange; */
 }
 
-div.card_image, div.card_content{
+div.card_image,
+div.card_content {
   width: 92%;
 }
 div.card_image {
@@ -217,10 +267,7 @@ div.card_content .bgeneral {
   align-self: flex-end;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
-  
 }
-
-
 
 /****************************
    FOOTER
@@ -277,7 +324,6 @@ footer > p {
   width: 90%;
   margin: 0 auto;
   padding-bottom: 5rem;
-
 }
 .fa-brands:hover {
   color: var(--cuaternary-color);
@@ -297,21 +343,121 @@ footer > p {
   border: none;
   color: var(--bg-color);
   font-size: 1.5rem;
-  height: 3.5rem;
+  padding: 1.2rem 0rem;
   /* margin-top: 4rem; */
   width: 100%;
-  
-
+  text-align: center;
+  cursor: pointer;
+  /* text-transform: uppercase; */
 }
 .bgeneral:hover {
   background-color: var(--terciary-color);
 }
 
-@media (min-width: 335px) {
-  div.name_web {
-    display: block;
+@media (min-width: 768px) {
+  main.index {
+    /* background-image: url("/src/assets/portadadesktop.jpg"); */
+    background-position: right 95% top 0rem;
+  }
+  /****************************
+       PAGINA CATEGORIA
+  *****************************/
+  div.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  main.categoria article:not(:first-child) {
+    margin-top: 0;
   }
 }
+
+@media (min-width: 992px) {
+  /****************************
+       HEADER
+  *****************************/
+  nav.menu_principal {
+    width: 90%;
+  }
+  button.bburguer {
+    display: none;
+  }
+  nav div.name_web_in_logo {
+    display: block;
+  }
+  nav div.name_web {
+    display: none;
+  }
+
+  header ul.opciones_menu {
+    /* le añado el important porque al modificar
+    con javascript el css lo añade en linea y por tanto 
+    supera en prioridad a la regla definida.  */
+    display: flex !important;
+    list-style: none;
+    text-transform: uppercase;
+    flex-direction: row;
+    position: inherit;
+    justify-content: center;
+    width: auto;
+    background-color: inherit;
+    padding: inherit;
+    z-index: inherit;
+  }
+  header ul.opciones_menu > li {
+    margin: 1rem 2rem;
+    border-bottom: inherit;
+  }
+
+  header ul.opciones_menu > li > a {
+    color: var(--primary-color);
+    display: inherit;
+
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  header ul.opciones_menu > li > a:hover {
+    color: var(--terciary-color);
+  }
+
+  header ul.smedia_menu {
+    display: flex;
+    list-style: none;
+  }
+  /****************************
+       PAGINA INDEX
+  *****************************/
+  main.index {
+    background-position: right 110% top 0rem;
+  }
+  /****************************
+       PAGINA CATEGORIA
+  *****************************/
+  div.container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  main.categoria article:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+}
+@media (min-width: 1800px) {
+  /*  main.index {
+    width: 80vw;
+    margin: 0 auto;
+  } */
+  main.index {
+    background-image: url("/src/assets/The_Rolling_Stones_-_Friends_Arena_Stockholm_-_Thursday_12th_October_2017_StonesStockholm121017-97.jpg");
+  }
+}
+
 /* header nav.menu_principal {
   display: flex;
   justify-content: space-between;
