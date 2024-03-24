@@ -11,16 +11,16 @@ try {
 const opcionesMenu = document.querySelector(".opciones_menu");
 const opcion = document.querySelectorAll("ul.opciones_menu > li > a");
 const bBurguer = document.querySelector("button.bburguer");
-const iBurguer = document.querySelector(".fa-bars");
-const iCloseBurguer = document.querySelector(".fa-circle-xmark");
+/* const iBurguer = document.querySelector(".fa-bars"); */
+/* const iCloseBurguer = document.querySelector(".fa-circle-xmark"); */
 
 const toggleMenuBurguer = () => {
   
-  iBurguer.classList.toggle("on");
-  iCloseBurguer.classList.toggle("on");
+ /*  iBurguer.classList.toggle("on"); */
+  /* iCloseBurguer.classList.toggle("on"); */
   opcionesMenu.classList.toggle("on");
 
-  if (iBurguer.classList.contains("on")) {
+ /*  if (iBurguer.classList.contains("on")) {
     iCloseBurguer.style.display = "none";
     iBurguer.style.display = "block";
     opcionesMenu.style.display = "none";
@@ -28,6 +28,15 @@ const toggleMenuBurguer = () => {
     iCloseBurguer.style.display = "block";
     opcionesMenu.style.display = "block";
     iBurguer.style.display = "none";
+  } */
+  if (opcionesMenu.classList.contains("on")) {
+   /*  iCloseBurguer.style.display = "none";
+    iBurguer.style.display = "block"; */
+    opcionesMenu.style.display = "block";
+  } else {
+    opcionesMenu.style.display = "none";
+   /*  iCloseBurguer.style.display = "block"; */
+   /*  iBurguer.style.display = "none"; */
   }
 };
 
@@ -51,11 +60,11 @@ document.onclick = (e) => {
     (!opcionesMenu.contains(e.target) && !bBurguer.contains(e.target)) ||
     opcionSeleccionada(e) 
   ) {
-    iBurguer.classList.add("on");
-    iCloseBurguer.classList.remove("on");
+   /*  iBurguer.classList.add("on");
+    iCloseBurguer.classList.remove("on"); */
     opcionesMenu.classList.remove("on");
-    iCloseBurguer.style.display = "none";
-    iBurguer.style.display = "block";
+   /*  iCloseBurguer.style.display = "none";
+    iBurguer.style.display = "block"; */
     opcionesMenu.style.display = "none";
   }
   
