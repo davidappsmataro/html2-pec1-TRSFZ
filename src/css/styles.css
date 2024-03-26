@@ -3,9 +3,10 @@
 :root {
   --primary-color: rgb(256, 256, 256);
   --secondary-color: rgba(158, 139, 94, 1);
-  --secondary-color-alpha: rgba(255, 255, 255, 0.5);
+  --secondary-color-alpha: rgba(255, 255, 255, 0.8);
   --terciary-color: rgba(91, 91, 91, 1);
   --cuaternary-color: rgba(255, 45, 48, 1);
+  --quinary-color: rgba(0, 0, 0, 1);
   --contraste-color: rgb(191, 12, 240);
   --contraste-claro-color: rgb(229, 225, 254);
   --bg-color: rgb(247, 247, 247);
@@ -61,10 +62,11 @@ header {
   justify-content: center;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 header ul.smedia_menu li {
-   margin: 0rem 0.5rem;
+  margin: 0rem 0.5rem;
 }
 header ul.smedia_menu {
   display: none;
@@ -117,19 +119,21 @@ div.divlogo a {
   align-items: center;
 }
 
-div.name_web p, div.name_web_in_logo p {
+div.name_web p,
+div.name_web_in_logo p {
   font-family: var(--secondary-font);
   font-size: 3rem;
 }
-div.name_web a p:last-child, div.name_web_in_logo p:last-child {
+div.name_web a p:last-child,
+div.name_web_in_logo p:last-child {
   font-size: 2.5rem;
   text-align: center;
   color: var(--cuaternary-color);
 }
-div.name_web, div.name_web_in_logo {
+div.name_web,
+div.name_web_in_logo {
   display: none;
 }
-
 
 @media (min-width: 350px) {
   div.name_web {
@@ -164,10 +168,83 @@ main.index {
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /*  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 1fr); */
+  /*  gap: 2rem; */
 }
+.splide {
+  width: 100%;
+
+  /* height: 30rem;
+  width: 80%; */
+
+  /* background-color: orange; */
+  /*  grid-column: 1/span 12;
+  grid-row: 1 /span 5;
+  z-index: 0; */
+}
+
+.splide__slide {
+  position: relative;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner {
+  background-color: var(--secondary-color-alpha);
+
+  height: 20rem;
+  position: absolute;
+  width: 80%;
+  color: var(--quinary-color);
+  font-size: 3rem;
+  text-transform: uppercase;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /*  top: calc(var(--alto-header) + 3rem); */
+}
+
+.banner_top {
+  top: calc(var(--alto-header) + 3rem);
+}
+.banner_bottom {
+  bottom: 15rem;
+}
+
+div.banner__container {
+  /*  margin-top: 2rem; */
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+p.banner__text__secondary {
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 2rem;
+}
+p.banner__text__terciary {
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 200;
+}
+div.banner__container a {
+  margin-top: 2rem;
+  width: 20rem;
+}
+
 /****************************
      PAGINA CATEGORIA
 *****************************/
@@ -186,6 +263,50 @@ main.categoria h1 {
 
 main.categoria {
   padding-top: calc(var(--alto-header) + 1rem);
+}
+
+/****************************
+   CARD
+*****************************/
+
+div.card_container {
+  min-height: 40rem;
+  background-color: var(--bg-terciary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+
+  margin-top: 1rem;
+  /*   background-color: orange; */
+}
+
+div.card_image,
+div.card_content {
+  /* width: 92%; */
+  padding: 1.5rem;
+  
+}
+
+div.card_content {
+
+  
+  display: flex;
+  flex-direction: column;
+ 
+ 
+  
+
+}
+div.card_content p {
+  margin-top: 0.8rem;
+}
+div.card_content .bgeneral {
+  width: 40%;
+  align-self: flex-end;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
 }
 /****************************
      PAGINA PRESENTACION
@@ -231,42 +352,6 @@ main.enlaces h1 {
   color: var(--primary-color);
   width: 100%;
   text-align: center;
-}
-/****************************
-   CARD
-*****************************/
-
-div.card_container {
-  min-height: 40rem;
-  background-color: var(--bg-terciary-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-top: 1rem;
-  /*   background-color: orange; */
-}
-
-div.card_image,
-div.card_content {
-  width: 92%;
-}
-div.card_image {
-  margin-top: 1.5rem;
-}
-div.card_content {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-}
-div.card_content p {
-  margin-top: 0.8rem;
-}
-div.card_content .bgeneral {
-  width: 40%;
-  align-self: flex-end;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
 }
 
 /****************************
@@ -372,11 +457,16 @@ footer > p {
     margin-top: 0;
   }
 }
-
+/************************************************************************
+                                    min-width: 992px
+  ************************************************************************/
 @media (min-width: 992px) {
   /****************************
        HEADER
   *****************************/
+  header {
+    position: relative;
+  }
   nav.menu_principal {
     width: 90%;
   }
@@ -432,6 +522,18 @@ footer > p {
   main.index {
     background-position: right 110% top 0rem;
   }
+  .splide {
+    height: 85vh;
+  }
+  /* .banner {
+    top: inherit;
+  } */
+  .banner_top {
+    top: 3rem;
+  }
+  .banner_bottom {
+    bottom: 25rem;
+  }
   /****************************
        PAGINA CATEGORIA
   *****************************/
@@ -443,11 +545,24 @@ footer > p {
   main.categoria article:not(:first-child) {
     margin-top: 0;
   }
+  main.categoria {
+    padding-top: 1rem;
+  }
 }
-
+/************************************************************************
+                                    min-width: 1200px
+  ************************************************************************/
 @media (min-width: 1200px) {
-  
+  /* .banner_top {
+    top: calc(var(--alto-header) + 3rem);
+  } */
+  .banner_bottom {
+    bottom: 20rem;
+  }
 }
+/************************************************************************
+                                    min-width: 1800px
+  ************************************************************************/
 @media (min-width: 1800px) {
   /*  main.index {
     width: 80vw;

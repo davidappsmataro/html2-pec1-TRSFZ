@@ -7,6 +7,31 @@ try {
 } catch (error) {
     console.log(error)
 } */
+import Splide from "@splidejs/splide";
+
+/* new Splide( '.splide', {
+  type    : 'loop',
+  autoplay: 'play',
+  perPage : 1,
+  arrows: true,
+  pagination: true
+} ).mount(); */
+
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#fullscreen-carousel", {
+    width: "100vw",
+    height: "100vh",
+
+    type: "loop",
+    autoplay: "play",
+  }).mount();
+});
+/* document.addEventListener( 'DOMContentLoaded', function () {
+  new Splide( '.splide', {
+		width : '100vw',
+		height: '100vh',
+  } ).mount();
+} ); */
 
 const opcionesMenu = document.querySelector(".opciones_menu");
 const opcion = document.querySelectorAll("ul.opciones_menu > li > a");
@@ -15,12 +40,11 @@ const bBurguer = document.querySelector("button.bburguer");
 /* const iCloseBurguer = document.querySelector(".fa-circle-xmark"); */
 
 const toggleMenuBurguer = () => {
-  
- /*  iBurguer.classList.toggle("on"); */
+  /*  iBurguer.classList.toggle("on"); */
   /* iCloseBurguer.classList.toggle("on"); */
   opcionesMenu.classList.toggle("on");
 
- /*  if (iBurguer.classList.contains("on")) {
+  /*  if (iBurguer.classList.contains("on")) {
     iCloseBurguer.style.display = "none";
     iBurguer.style.display = "block";
     opcionesMenu.style.display = "none";
@@ -30,18 +54,18 @@ const toggleMenuBurguer = () => {
     iBurguer.style.display = "none";
   } */
   if (opcionesMenu.classList.contains("on")) {
-   /*  iCloseBurguer.style.display = "none";
+    /*  iCloseBurguer.style.display = "none";
     iBurguer.style.display = "block"; */
     opcionesMenu.style.display = "block";
   } else {
     opcionesMenu.style.display = "none";
-   /*  iCloseBurguer.style.display = "block"; */
-   /*  iBurguer.style.display = "none"; */
+    /*  iCloseBurguer.style.display = "block"; */
+    /*  iBurguer.style.display = "none"; */
   }
 };
 
 const opcionSeleccionada = (e) => {
-  //Si hemos pulsado una de las opciones devolvemos 
+  //Si hemos pulsado una de las opciones devolvemos
   //true para cerrar el menu burguer
   let pulsadaOpcion = false;
   opcion.forEach((opc) => {
@@ -55,17 +79,15 @@ const opcionSeleccionada = (e) => {
 bBurguer.addEventListener("click", toggleMenuBurguer);
 
 document.onclick = (e) => {
-  
   if (
     (!opcionesMenu.contains(e.target) && !bBurguer.contains(e.target)) ||
-    opcionSeleccionada(e) 
+    opcionSeleccionada(e)
   ) {
-   /*  iBurguer.classList.add("on");
+    /*  iBurguer.classList.add("on");
     iCloseBurguer.classList.remove("on"); */
     opcionesMenu.classList.remove("on");
-   /*  iCloseBurguer.style.display = "none";
+    /*  iCloseBurguer.style.display = "none";
     iBurguer.style.display = "block"; */
     opcionesMenu.style.display = "none";
   }
-  
 };
