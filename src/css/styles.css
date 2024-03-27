@@ -56,10 +56,12 @@ article h2 {
 header {
   height: var(--alto-header);
   width: 100%;
+  
   background-color: var(--bg-extremos);
   /* border-bottom: 1px solid var(--primary-color); */
   display: flex;
   justify-content: center;
+ 
   position: fixed;
   top: 0;
   z-index: 100;
@@ -78,6 +80,7 @@ nav.menu_principal {
   justify-content: space-between;
   width: 100%;
   margin-left: 2rem;
+  max-width: 1140px;
 }
 header ul.opciones_menu {
   display: none;
@@ -203,6 +206,7 @@ main.index {
   height: 20rem;
   position: absolute;
   width: 80%;
+  max-width: 1140px;
   color: var(--quinary-color);
   font-size: 3rem;
   text-transform: uppercase;
@@ -250,15 +254,16 @@ div.banner__container a {
 *****************************/
 
 /* div contenedor del card */
-main.categoria div.container h1 + article {
-  margin-top: 3rem;
-}
+/* main.categoria div.container  {
+  margin-top: 1rem;
+} */
 main.categoria article:not(:first-child) {
   margin-top: 3rem;
 }
 main.categoria h1 {
-  text-align: center;
+  text-align: left;
   font-weight: 100;
+  margin-top: 2.5rem;
 }
 
 main.categoria {
@@ -290,10 +295,11 @@ div.card_content {
 }
 
 div.card_content {
-
-  
+ 
+  width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 0 1.5rem 1.5rem 1.5rem;
  
  
   
@@ -303,7 +309,7 @@ div.card_content p {
   margin-top: 0.8rem;
 }
 div.card_content .bgeneral {
-  width: 40%;
+  
   align-self: flex-end;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
@@ -406,9 +412,14 @@ footer > p {
     CLASES
   *****************************/
 .container {
+  margin-top: 3rem;
   width: 90%;
+  max-width: 1140px;
   margin: 0 auto;
   padding-bottom: 5rem;
+}
+h1.container {
+  padding-bottom: 3rem;
 }
 .fa-brands:hover {
   color: var(--cuaternary-color);
@@ -428,17 +439,23 @@ footer > p {
   border: none;
   color: var(--bg-color);
   font-size: 1.5rem;
-  padding: 1.2rem 0rem;
+  padding: 1.2rem 1.2rem;
   /* margin-top: 4rem; */
-  width: 100%;
+  /* width: 100%; */
+  display: inline-block;
   text-align: center;
   cursor: pointer;
   /* text-transform: uppercase; */
 }
+.bgeneral .fa-chevron-right {
+  margin-left: 2rem;
+}
 .bgeneral:hover {
   background-color: var(--terciary-color);
 }
-
+/************************************************************************
+                                    min-width: 768px
+  ************************************************************************/
 @media (min-width: 768px) {
   main.index {
     /* background-image: url("/src/assets/portadadesktop.jpg"); */
@@ -447,7 +464,7 @@ footer > p {
   /****************************
        PAGINA CATEGORIA
   *****************************/
-  div.container {
+  .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
@@ -469,7 +486,9 @@ footer > p {
   }
   nav.menu_principal {
     width: 90%;
+    margin-left: 0rem;
   }
+  
   button.bburguer {
     display: none;
   }
@@ -537,7 +556,7 @@ footer > p {
   /****************************
        PAGINA CATEGORIA
   *****************************/
-  div.container {
+  .container {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 3rem;
@@ -552,7 +571,7 @@ footer > p {
 /************************************************************************
                                     min-width: 1200px
   ************************************************************************/
-@media (min-width: 1200px) {
+@media (min-width: 1140px) {
   /* .banner_top {
     top: calc(var(--alto-header) + 3rem);
   } */
