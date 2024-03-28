@@ -56,12 +56,12 @@ article h2 {
 header {
   height: var(--alto-header);
   width: 100%;
-  
+
   background-color: var(--bg-extremos);
   /* border-bottom: 1px solid var(--primary-color); */
   display: flex;
   justify-content: center;
- 
+
   position: fixed;
   top: 0;
   z-index: 100;
@@ -78,37 +78,30 @@ nav.menu_principal {
   color: var(--primary-color);
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin-left: 2rem;
-  max-width: 1140px;
+  width: 95%;
 }
 header ul.opciones_menu {
   display: none;
   list-style: none;
   text-transform: uppercase;
   flex-direction: column;
-  /*  position: relative; */
   position: absolute;
   top: var(--alto-header);
   left: 0rem;
   width: 80%;
-
   background-color: var(--bg-color);
   padding-bottom: 1rem;
   z-index: 100;
 }
 
 header ul.opciones_menu > li {
-  /* padding: 1rem 2rem; */
   margin: 0rem 2rem;
   border-bottom: 1px solid var(--secondary-color);
-  /*  background-color: orange; */
 }
 
 header ul.opciones_menu > li > a {
   color: var(--secondary-color);
   display: block;
-  /* background-color: pink; */
   padding: 2rem 2rem;
   font-size: 1.6rem;
   font-weight: bold;
@@ -157,13 +150,12 @@ button.bburguer > i.fa-circle-xmark {
 
 main {
   background-color: var(--bg-secondary-color);
-  /* height: calc(100vh - 15rem); */
 }
 
 /****************************
      PAGINA INDEX
 *****************************/
-main.index {
+/* main.index {
   background-color: black;
   background-image: url("/src/assets/portadadesktop.jpg");
   background-position: right 65% top 0rem;
@@ -172,22 +164,15 @@ main.index {
   height: 100vh;
   width: 100vw;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
-  /*  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(10, 1fr); */
-  /*  gap: 2rem; */
+ 
+} */
+main.index {
+  height: 100vh;
+  width: 100vw;
 }
 .splide {
   width: 100%;
-
-  /* height: 30rem;
-  width: 80%; */
-
-  /* background-color: orange; */
-  /*  grid-column: 1/span 12;
-  grid-row: 1 /span 5;
-  z-index: 0; */
 }
 
 .splide__slide {
@@ -206,7 +191,7 @@ main.index {
   height: 20rem;
   position: absolute;
   width: 80%;
-  max-width: 1140px;
+
   color: var(--quinary-color);
   font-size: 3rem;
   text-transform: uppercase;
@@ -249,25 +234,21 @@ div.banner__container a {
   width: 20rem;
 }
 
+main > h1:first-child {
+  text-align: left;
+  font-weight: 100;
+  margin-top: 2.5rem;
+  width: 90%;
+}
+main:not(.index) {
+  padding-top: calc(var(--alto-header) + 1rem);
+}
 /****************************
      PAGINA CATEGORIA
 *****************************/
 
-/* div contenedor del card */
-/* main.categoria div.container  {
-  margin-top: 1rem;
-} */
 main.categoria article:not(:first-child) {
   margin-top: 3rem;
-}
-main.categoria h1 {
-  text-align: left;
-  font-weight: 100;
-  margin-top: 2.5rem;
-}
-
-main.categoria {
-  padding-top: calc(var(--alto-header) + 1rem);
 }
 
 /****************************
@@ -281,7 +262,6 @@ div.card_container {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  
 
   margin-top: 1rem;
   /*   background-color: orange; */
@@ -291,25 +271,18 @@ div.card_image,
 div.card_content {
   /* width: 92%; */
   padding: 1.5rem;
-  
 }
 
 div.card_content {
- 
   width: 100%;
   display: flex;
   flex-direction: column;
   padding: 0 1.5rem 1.5rem 1.5rem;
- 
- 
-  
-
 }
 div.card_content p {
   margin-top: 0.8rem;
 }
 div.card_content .bgeneral {
-  
   align-self: flex-end;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
@@ -318,46 +291,29 @@ div.card_content .bgeneral {
      PAGINA PRESENTACION
 *****************************/
 
+/* TODO:Eliminar */
 main.presentacion {
-  background-color: var(--bg-terciary-color);
   height: 100vh;
   width: 100%;
 }
-main.presentacion h1 {
-  padding-top: calc(var(--alto-header) + 1rem);
-  color: var(--primary-color);
-  width: 100%;
-  text-align: center;
-}
+
 /****************************
      PAGINA HISTORIA
 *****************************/
-
+/* TODO:Eliminar */
 main.historia {
-  background-color: var(--bg-terciary-color);
   height: 100vh;
   width: 100%;
 }
-main.historia h1 {
-  padding-top: calc(var(--alto-header) + 1rem);
-  color: var(--primary-color);
-  width: 100%;
-  text-align: center;
-}
+
 /****************************
      PAGINA ENLACES
 *****************************/
-
+/* TODO:Eliminar */
 main.enlaces {
-  background-color: var(--bg-terciary-color);
+  /*  background-color: var(--bg-terciary-color); */
   height: 100vh;
   width: 100%;
-}
-main.enlaces h1 {
-  padding-top: calc(var(--alto-header) + 1rem);
-  color: var(--primary-color);
-  width: 100%;
-  text-align: center;
 }
 
 /****************************
@@ -412,9 +368,15 @@ footer > p {
     CLASES
   *****************************/
 .container {
+  max-width: 1140px;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+}
+.container_categoria {
   margin-top: 3rem;
   width: 90%;
-  max-width: 1140px;
+
   margin: 0 auto;
   padding-bottom: 5rem;
 }
@@ -457,14 +419,11 @@ h1.container {
                                     min-width: 768px
   ************************************************************************/
 @media (min-width: 768px) {
-  main.index {
-    /* background-image: url("/src/assets/portadadesktop.jpg"); */
-    background-position: right 95% top 0rem;
-  }
+  
   /****************************
        PAGINA CATEGORIA
   *****************************/
-  .container {
+  .container_categoria {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
@@ -486,9 +445,9 @@ h1.container {
   }
   nav.menu_principal {
     width: 90%;
-    margin-left: 0rem;
+    /*  margin-left: 0rem; */
   }
-  
+
   button.bburguer {
     display: none;
   }
@@ -538,9 +497,9 @@ h1.container {
   /****************************
        PAGINA INDEX
   *****************************/
-  main.index {
+  /* main.index {
     background-position: right 110% top 0rem;
-  }
+  } */
   .splide {
     height: 85vh;
   }
@@ -556,7 +515,7 @@ h1.container {
   /****************************
        PAGINA CATEGORIA
   *****************************/
-  .container {
+  .container_categoria {
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 3rem;
@@ -571,10 +530,8 @@ h1.container {
 /************************************************************************
                                     min-width: 1200px
   ************************************************************************/
-@media (min-width: 1140px) {
-  /* .banner_top {
-    top: calc(var(--alto-header) + 3rem);
-  } */
+@media (min-width: 1200px) {
+  
   .banner_bottom {
     bottom: 20rem;
   }
@@ -583,82 +540,6 @@ h1.container {
                                     min-width: 1800px
   ************************************************************************/
 @media (min-width: 1800px) {
-  /*  main.index {
-    width: 80vw;
-    margin: 0 auto;
-  } */
-  main.index {
-    background-image: url("/src/assets/The_Rolling_Stones_-_Friends_Arena_Stockholm_-_Thursday_12th_October_2017_StonesStockholm121017-97.jpg");
-  }
-}
-
-/* header nav.menu_principal {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  align-items: center;
-  margin: 0 3rem;
-  max-width: 1170px;
-  width: 100%;
- 
-}
-header nav.menu_principal ul {
-  display: flex;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-header nav.menu_principal ul {
-  padding: 0 1rem;
-}
-header nav.menu_principal ul:first-of-type li {
-  margin: 0 3rem;
-  border: 1px solid transparent;
-  padding: 0.5rem 0rem;
-  transition: all 0.5s ease-out;
-}
-header nav.menu_principal ul:first-of-type li:hover {
-  color: yellow;
-  border-bottom: 1px solid yellow;
-}
-header nav.menu_principal ul:last-child li {
-  margin: 0 0.5rem;
-}
-
-div.divlogo a {
   
-  text-align: center;
-  display: flex;
-  align-items: center;
 }
-div.divlogo p {
-  font-size: 3rem;
-} */
-/* .divlogo {
-} */
-/* main img {
-  width: 100vw;
-} */
 
-/* main {
-  background-color: black;
-  background-image: url("/src/assets/fondo_portada.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-}
-div.fondo_portada {
-  background-color: rgba(255, 255, 255, 0.6);
- 
-  grid-row: 2/6;
-  grid-column: 9/12;
-}
-div.fondo_portada > p {
- 
-  font-size: 3rem;
-} */
