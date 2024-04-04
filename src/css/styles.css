@@ -35,6 +35,7 @@ html {
   font-size: 10px;
   /* height: 100vh; */
 }
+
 body {
   background-color: var(--bg-extremos);
   color: var(--primary-color);
@@ -44,16 +45,63 @@ a {
   text-decoration: none;
   color: var(--primary-color);
 }
-article h2 {
+.detalle a {
+  color: var(--cuaternary-color);
+}
+
+h1 {
+  text-transform: uppercase;
+  padding-bottom: 3rem;
+  text-align: left;
+  font-weight: 100;
+  margin-top: 2.5rem;
+}
+.detalle h1 {
+  font-weight: 400;
+  color: var(--quinary-color);
+}
+
+h2 {
   font-weight: 300;
 
   color: var(--terciary-color);
+}
+.detalle h2 {
+  color: var(--quinary-color);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+main p {
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+/* main p:not(:first-of-type) {
+  margin-top: 2rem;
+} */
+blockquote p, q, cite {
+  font-weight: 700;
+  font-style: italic;
+}
+blockquote {
+  width: 90%;
+  margin: 1rem auto;
+  padding-left: 1rem;
+  border-left: 6px solid var(--cuaternary-color);
+}
+blockquote footer p {
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 /****************************
      MENU PRINCIPAL
 *****************************/
 
-header {
+header.header {
   height: var(--alto-header);
   width: 100%;
 
@@ -67,10 +115,10 @@ header {
   z-index: 100;
 }
 
-header ul.smedia_menu li {
+header.header ul.smedia_menu li {
   margin: 0rem 0.5rem;
 }
-header ul.smedia_menu {
+header.header ul.smedia_menu {
   display: none;
 }
 nav.menu_principal {
@@ -80,7 +128,7 @@ nav.menu_principal {
   justify-content: space-between;
   width: 95%;
 }
-header ul.opciones_menu {
+header.header ul.opciones_menu {
   display: none;
   list-style: none;
   text-transform: uppercase;
@@ -94,20 +142,31 @@ header ul.opciones_menu {
   z-index: 100;
 }
 
-header ul.opciones_menu > li {
+header.header ul.opciones_menu > li {
   margin: 0rem 2rem;
   border-bottom: 1px solid var(--secondary-color);
 }
 
-header ul.opciones_menu > li > a {
+header.header ul.opciones_menu > li > a {
   color: var(--secondary-color);
   display: block;
   padding: 2rem 2rem;
   font-size: 1.6rem;
   font-weight: bold;
 }
-header ul.opciones_menu > li > a:hover {
+header.header ul.opciones_menu > li > a:hover {
   color: var(--terciary-color);
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 0;
+}
+main {
+  background-color: var(--bg-secondary-color);
+  min-height: 100vh;
 }
 
 div.divlogo a {
@@ -116,7 +175,7 @@ div.divlogo a {
 }
 
 div.name_web p,
-div.name_web_in_logo p {
+div.name_web_in_logo p{
   font-family: var(--secondary-font);
   font-size: 3rem;
 }
@@ -130,9 +189,14 @@ div.name_web,
 div.name_web_in_logo {
   display: none;
 }
-
+section.splide .banner {
+  display: none;
+}
 @media (min-width: 350px) {
   div.name_web {
+    display: block;
+  }
+  section.splide .banner {
     display: block;
   }
 }
@@ -146,10 +210,6 @@ button.bburguer {
 }
 button.bburguer > i.fa-circle-xmark {
   display: none;
-}
-
-main {
-  background-color: var(--bg-secondary-color);
 }
 
 /****************************
@@ -217,31 +277,54 @@ div.banner__container {
   justify-content: center;
   height: 100%;
 }
-
+/* p.banner__text {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 0rem;
+}
 p.banner__text__secondary {
   font-weight: bold;
   line-height: 2rem;
   font-size: 2rem;
+  margin-bottom: 0rem;
 }
 p.banner__text__terciary {
   font-weight: bold;
   line-height: 2rem;
   font-size: 2rem;
   font-weight: 200;
+  margin-bottom: 0rem;
+} */
+p.banner__text {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+p.banner__text__secondary {
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 2rem;
+  margin-bottom: 0rem;
+}
+p.banner__text__terciary {
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 0rem;
 }
 div.banner__container a {
   margin-top: 2rem;
   width: 20rem;
 }
 
-main > h1:first-child {
-  text-align: left;
-  font-weight: 100;
-  margin-top: 2.5rem;
-  width: 90%;
-}
 main:not(.index) {
   padding-top: calc(var(--alto-header) + 1rem);
+}
+div.banner_fluid + main {
+  padding-top: 1rem;
 }
 /****************************
      PAGINA CATEGORIA
@@ -275,69 +358,181 @@ div.card_content {
 
 div.card_content {
   width: 100%;
+
+  height: 14rem;
   display: flex;
   flex-direction: column;
-  padding: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0 1.5rem;
+  /* background-color: orange; */
+  position: relative;
+}
+div.card_content h3 {
+  text-transform: uppercase;
 }
 div.card_content p {
   margin-top: 0.8rem;
+  flex-grow: 1;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp */
+  /* https://css-tricks.com/almanac/properties/l/line-clamp/ */
+  /* display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden; */
 }
+/* .truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+} */
 div.card_content .bgeneral {
+  /* position: absolute;
+  right: 1.5rem;
+  bottom: 0; */
   align-self: flex-end;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+
+  /* justify-self: flex-end; */
+
+  /*  margin-top: 1.5rem; */
+  /* margin-bottom: 2rem; */
 }
+/****************************
+     PAGINA DETALLES GENERAL
+*****************************/
+main.detalle {
+  background-color: var(--bg-color);
+  color: var(--terciary-color);
+}
+
+
+/* main.detalle a {
+  color: var(--cuaternary-color);
+} */
+ul.breadcrumb {
+  list-style: none;
+  display: flex;
+  padding-top: calc(var(--alto-header) + 1rem);
+  
+  
+}
+ul.breadcrumb > li {
+  display: inline-block;
+  
+  /* position: relative; */
+  
+  
+}
+ul.breadcrumb li a {
+  color: var(--terciary-color);
+}
+ul.breadcrumb li a:hover {
+  color: var(--secondary-color);
+}
+ul.breadcrumb li.active {
+  color: var(--cuaternary-color);
+}
+ul.breadcrumb li+li::before {
+   content: '>';
+   color: var(--terciary-color);
+   padding-right: 0.5rem;
+   padding-left: 0.5rem;
+   
+   
+   /* position: absolute; */
+  
+}
+figcaption {
+  text-align: right;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+figcaption a {
+  color: var(--cuaternary-color);
+}
+div.intro p {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  letter-spacing: 0rem;
+  line-height: 2.5rem;
+  
+}
+section.relacionados {
+  margin-top: 8rem;
+}
+section.lista_categorias {
+  margin-top: 2rem;
+}
+section.lista_categorias ul {
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+section.lista_categorias ul > li {
+  
+  border: 2px solid var(--terciary-color);
+  font-size: 1.1rem;
+  margin: 0.4rem 0.6rem 0 0;
+  padding: 0.3rem 0.3rem;
+  margin-bottom: 3rem;
+}
+section.lista_categorias ul > li:hover {
+  background-color: var(--bg-secondary-color);
+}
+section.lista_categorias ul > li > a {
+ 
+  font-size: 1.8rem;
+}
+div.grid-detalle {
+  display: grid;
+  
+}
+
+
 /****************************
      PAGINA PRESENTACION
 *****************************/
-
-/* TODO:Eliminar */
-main.presentacion {
-  height: 100vh;
-  width: 100%;
+main.presentacion section p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+span.name_web_presentacion {
+  text-decoration: underline;
+  color: var(--cuaternary-color);
 }
 
 /****************************
      PAGINA HISTORIA
 *****************************/
-/* TODO:Eliminar */
-main.historia {
-  height: 100vh;
-  width: 100%;
-}
+
 
 /****************************
      PAGINA ENLACES
 *****************************/
-/* TODO:Eliminar */
-main.enlaces {
-  /*  background-color: var(--bg-terciary-color); */
-  height: 100vh;
-  width: 100%;
-}
+
 
 /****************************
    FOOTER
 *****************************/
-footer {
+footer.footer {
   background-color: var(--bg-extremos);
   min-height: 15rem;
   /* height: 25%; */
 }
-footer ul.smedia_menu_footer {
+footer.footer ul.smedia_menu_footer {
   display: flex;
   width: 100%;
   justify-content: center;
   padding-top: 5rem;
 }
-footer ul.smedia_menu_footer li {
+footer.footer ul.smedia_menu_footer li {
   display: flex;
   padding: 1rem;
 }
-footer ul.smedia_menu_footer li a {
+footer.footer ul.smedia_menu_footer li a {
   color: var(--terciary-color);
 }
-footer ul.legal {
+footer.footer ul.legal {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -347,17 +542,17 @@ footer ul.legal {
   padding-bottom: 5rem;
 }
 
-footer ul.legal li {
+footer.footer ul.legal li {
   margin: 0.5rem 0rem;
 }
-footer ul.legal li a {
+footer.footer ul.legal li a {
   color: var(--terciary-color);
   text-transform: uppercase;
 }
-footer ul.legal li a:hover {
+footer.footer ul.legal li a:hover {
   color: var(--cuaternary-color);
 }
-footer > p {
+footer.footer > p {
   text-align: center;
   padding-bottom: 5rem;
   color: var(--cuaternary-color);
@@ -369,20 +564,20 @@ footer > p {
   *****************************/
 .container {
   max-width: 1140px;
+  width: 80%;
+
   /* width: 100%; */
   margin-left: auto;
   margin-right: auto;
 }
 .container_categoria {
   margin-top: 3rem;
-  width: 90%;
+  width: 80%;
 
   margin: 0 auto;
   padding-bottom: 5rem;
 }
-h1.container {
-  padding-bottom: 3rem;
-}
+
 .fa-brands:hover {
   color: var(--cuaternary-color);
 }
@@ -394,6 +589,15 @@ h1.container {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.banner_fluid {
+  display: block;
+  width: 100%;
+  padding-top: calc(var(--alto-header) + 1rem);
+  display: none;
+}
+.banner_fluid img {
+  width: 100%;
 }
 .bgeneral {
   background-color: var(--cuaternary-color);
@@ -415,10 +619,44 @@ h1.container {
 .bgeneral:hover {
   background-color: var(--terciary-color);
 }
+
+/* .parrafo_imagen {
+  margin-top: 2rem;
+  width: 100%;
+} */
+
+.parrafo_imagen img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+/* .clearfix {
+  clear: both;
+} */
+.grid-videos {
+   margin-top: 3rem;
+   display: grid;
+   gap: 2rem;
+   
+}
+/* .parrafo_imagen p {
+  margin-top: 2rem;
+} */
+
+
+/* .parrafo_imagen img {
+  object-fit: contain;
+  width: 100%;
+} */
 /************************************************************************
                                     min-width: 768px
   ************************************************************************/
 @media (min-width: 768px) {
+  header.header {
+    position: relative;
+  }
+  main:not(.index) {
+    padding-top: 1rem;
+  }
   
   /****************************
        PAGINA CATEGORIA
@@ -432,6 +670,35 @@ h1.container {
   main.categoria article:not(:first-child) {
     margin-top: 0;
   }
+  /****************************
+       PAGINA PRESENTACION
+  *****************************/
+  main.presentacion section p {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  p.banner__text {
+    font-size: 2rem;
+  }
+  .banner_top {
+    top: 3rem;
+  }
+  .banner_fluid {
+    padding-top: 0rem;
+   
+  }
+  .parrafo_imagen img {
+    float: left;
+    width: 50%;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+   /****************************
+     PAGINA DETALLES GENERAL
+*****************************/
+ul.breadcrumb {
+  padding-top: 1rem;
+}
 }
 /************************************************************************
                                     min-width: 992px
@@ -440,7 +707,7 @@ h1.container {
   /****************************
        HEADER
   *****************************/
-  header {
+  header.header {
     position: relative;
   }
   nav.menu_principal {
@@ -458,7 +725,7 @@ h1.container {
     display: none;
   }
 
-  header ul.opciones_menu {
+  header.header ul.opciones_menu {
     /* le añado el important porque al modificar
     con javascript el css lo añade en linea y por tanto 
     supera en prioridad a la regla definida.  */
@@ -473,12 +740,12 @@ h1.container {
     padding: inherit;
     z-index: inherit;
   }
-  header ul.opciones_menu > li {
+  header.header ul.opciones_menu > li {
     margin: 1rem 2rem;
     border-bottom: inherit;
   }
 
-  header ul.opciones_menu > li > a {
+  header.header ul.opciones_menu > li > a {
     color: var(--primary-color);
     display: inherit;
 
@@ -486,13 +753,19 @@ h1.container {
     font-size: 1.6rem;
     font-weight: bold;
   }
-  header ul.opciones_menu > li > a:hover {
+  header.header ul.opciones_menu > li > a:hover {
     color: var(--terciary-color);
   }
 
-  header ul.smedia_menu {
+  header.header ul.smedia_menu {
     display: flex;
     list-style: none;
+  }
+  main:not(.index) {
+    padding-top: 1rem;
+  }
+  div.card_content {
+   height: 18rem;
   }
   /****************************
        PAGINA INDEX
@@ -526,20 +799,44 @@ h1.container {
   main.categoria {
     padding-top: 1rem;
   }
+/****************************
+       PAGINA PRESENTACION
+  *****************************/
+  main.presentacion section p {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+ 
+/****************************
+      clases
+  *****************************/
+  .grid-videos {
+    grid-template-columns: repeat(2, 1fr);
+    
+ }
 }
 /************************************************************************
                                     min-width: 1200px
   ************************************************************************/
 @media (min-width: 1200px) {
-  
   .banner_bottom {
     bottom: 20rem;
   }
+div.grid-detalle {
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  grid-gap: 2rem;
+}
+  
+div.grid-detalle article {
+  grid-column: 1/9;
+}
+div.grid-detalle aside {
+  grid-column: 9/12;
+}
 }
 /************************************************************************
                                     min-width: 1800px
   ************************************************************************/
 @media (min-width: 1800px) {
-  
 }
-

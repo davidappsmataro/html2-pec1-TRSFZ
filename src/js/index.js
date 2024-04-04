@@ -17,14 +17,22 @@ import Splide from "@splidejs/splide";
   pagination: true
 } ).mount(); */
 
-document.addEventListener("DOMContentLoaded", function () {
-  new Splide("#fullscreen-carousel", {
-    width: "100vw",
-    height: "100vh",
+//Generaba un error cuando cargaba cualquier página que no
+//tuviera el slider.
+//Sol: https://github.com/Splidejs/splide/discussions/1032
 
-    type: "loop",
-    autoplay: "play",
-  }).mount();
+document.addEventListener("DOMContentLoaded", function () {
+  const splideCheck = document.getElementsByClassName("splide").length;
+  console.log(splideCheck);
+  if (splideCheck) {
+    new Splide("#fullscreen-carousel", {
+      width: "100vw",
+      height: "100vh",
+
+       type: "loop",
+      autoplay: "play",
+    }).mount();
+  }
 });
 /* document.addEventListener( 'DOMContentLoaded', function () {
   new Splide( '.splide', {

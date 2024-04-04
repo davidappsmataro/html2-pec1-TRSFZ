@@ -23,3 +23,10 @@ categoria - historia
 https://commons.wikimedia.org/wiki/File:Mick_Jagger_(1976).jpg
 
 ```
+
+presentacion 
+```
+https://commons.wikimedia.org/wiki/File:Rolling_Stones_-_Keith-Mick-Ron_(1981).jpg
+https://commons.wikimedia.org/wiki/File:Rolling_Stones_concert_in_Zuiderpark_te_Den_Haag,_Mick_Jagger_in_aktie,_Bestanddeelnr_928-6120.jpg
+https://commons.wikimedia.org/wiki/File:Mick_Jagger_Desert_Trip_2016-49.jpg
+```
