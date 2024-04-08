@@ -30,3 +30,5 @@ https://commons.wikimedia.org/wiki/File:Rolling_Stones_-_Keith-Mick-Ron_(1981).j
 https://commons.wikimedia.org/wiki/File:Rolling_Stones_concert_in_Zuiderpark_te_Den_Haag,_Mick_Jagger_in_aktie,_Bestanddeelnr_928-6120.jpg
 https://commons.wikimedia.org/wiki/File:Mick_Jagger_Desert_Trip_2016-49.jpg
 ```
+
+https://es.rollingstone.com/escucha-sweet-sounds-of-heaven-la-cancion-de-the-rolling-stones-con-lady-gaga-y-stevie-wonder/
