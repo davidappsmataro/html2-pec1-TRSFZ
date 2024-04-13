@@ -23,12 +23,10 @@ import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", function () {
   const splideCheck = document.getElementsByClassName("splide").length;
-  console.log(splideCheck);
   if (splideCheck) {
     new Splide("#fullscreen-carousel", {
       width: "100vw",
       height: "100vh",
-
        type: "loop",
       autoplay: "play",
     }).mount();

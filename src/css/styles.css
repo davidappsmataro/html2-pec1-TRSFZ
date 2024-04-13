@@ -6,7 +6,6 @@
   --secondary-color-alpha: rgba(255, 255, 255, 0.8);
   --terciary-color: rgba(91, 91, 91, 1);
   --cuaternary-color: rgba(255, 45, 48, 1);
-  --cuaternary-color-alpha: rgba(188, 68, 154, 0.8);
   --quinary-color: rgba(0, 0, 0, 1);
   --bg-color: rgb(232, 232, 232);
   --bg-secondary-color: rgba(20, 20, 20, 1);
@@ -45,11 +44,13 @@ a {
   color: var(--primary-color);
   cursor: pointer;
 }
-.detalle a {
+.detalle a,
+main.enlaces a {
   color: var(--cuaternary-color);
 }
-.detalle a:hover {
-  color: var(--terciary-color);
+.detalle a:hover,
+main.enlaces a:hover {
+  color: var(--secondary-color);
 }
 
 h1 {
@@ -78,7 +79,6 @@ main.enlaces h3 {
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 1rem;
 }
-
 main.enlaces article > section:not(:first-of-type) {
   margin-top: 6rem;
 }
@@ -90,9 +90,6 @@ main p {
   margin-bottom: 2rem;
 }
 
-/* main p:not(:first-of-type) {
-  margin-top: 2rem;
-} */
 blockquote p,
 q,
 cite {
@@ -111,29 +108,22 @@ blockquote footer p {
   line-height: 1.5rem;
   font-weight: 400;
 }
-
 article > section {
   margin-top: 3rem;
 }
-
 /****************************
      MENU PRINCIPAL
 *****************************/
-
 header.header {
   height: var(--alto-header);
   width: 100%;
-
   background-color: var(--bg-extremos);
-  /* border-bottom: 1px solid var(--primary-color); */
   display: flex;
   justify-content: center;
-
   position: fixed;
   top: 0;
   z-index: 100;
 }
-
 header.header ul.smedia_menu li {
   margin: 0rem 0.5rem;
 }
@@ -166,12 +156,10 @@ header.header ul.opciones_menu {
   padding-bottom: 1rem;
   z-index: 100;
 }
-
 header.header ul.opciones_menu > li {
   margin: 0rem 2rem;
   border-bottom: 1px solid var(--secondary-color);
 }
-
 header.header ul.opciones_menu > li > a {
   color: var(--secondary-color);
   display: block;
@@ -182,7 +170,6 @@ header.header ul.opciones_menu > li > a {
 header.header ul.opciones_menu > li > a:hover {
   color: var(--terciary-color);
 }
-
 iframe.youtube {
   width: 100%;
   height: auto;
@@ -195,12 +182,10 @@ main {
   min-height: 100vh;
   padding-bottom: 6rem;
 }
-
 div.divlogo a {
   display: flex;
   align-items: center;
 }
-
 div.name_web p,
 div.name_web_in_logo p {
   font-family: var(--secondary-font);
@@ -251,7 +236,6 @@ div.insta {
   margin-bottom: 2rem;
   display: none;
   margin-top: 2rem;
-  /* background-color: orange; */
 }
 @media (min-width: 414px) {
   div.insta {
@@ -267,18 +251,7 @@ div.flex-elements {
 /****************************
      PAGINA INDEX
 *****************************/
-/* main.index {
-  background-color: black;
-  background-image: url("/src/assets/portadadesktop.jpg");
-  background-position: right 65% top 0rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
- 
-} */
+
 main.index {
   height: 100vh;
   width: 100vw;
@@ -286,7 +259,6 @@ main.index {
 .splide {
   width: 100%;
 }
-
 .splide__slide {
   position: relative;
 }
@@ -296,14 +268,11 @@ main.index {
   height: 100%;
   object-fit: cover;
 }
-
 .banner {
   background-color: var(--secondary-color-alpha);
-
   height: 20rem;
   position: absolute;
   width: 80%;
-
   color: var(--quinary-color);
   font-size: 3rem;
   text-transform: uppercase;
@@ -311,42 +280,20 @@ main.index {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  /*  top: calc(var(--alto-header) + 3rem); */
 }
-
 .banner_top {
   top: calc(var(--alto-header) + 3rem);
 }
 .banner_bottom {
   bottom: 15rem;
 }
-
 div.banner__container {
-  /*  margin-top: 2rem; */
   margin-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
 }
-/* p.banner__text {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
-  margin-bottom: 0rem;
-}
-p.banner__text__secondary {
-  font-weight: bold;
-  line-height: 2rem;
-  font-size: 2rem;
-  margin-bottom: 0rem;
-}
-p.banner__text__terciary {
-  font-weight: bold;
-  line-height: 2rem;
-  font-size: 2rem;
-  font-weight: 200;
-  margin-bottom: 0rem;
-} */
 p.banner__text {
   font-size: 2rem;
   line-height: 2rem;
@@ -371,25 +318,30 @@ div.banner__container a {
   margin-top: 2rem;
   width: 20rem;
 }
-
 main:not(.index) {
   padding-top: calc(var(--alto-header) + 1rem);
 }
 div.banner_fluid + main {
   padding-top: 1rem;
 }
+button.splide__arrow.splide__arrow--prev,
+button.splide__arrow.splide__arrow--next,
+button.splide__pagination__page.is-active {
+  background: var(--cuaternary-color) !important;
+}
+button.splide__arrow {
+  width: 2.5em;
+  height: 2.5em;
+}
 /****************************
      PAGINA CATEGORIA
 *****************************/
-
 main.categoria article:not(:first-child) {
   margin-top: 3rem;
 }
-
 /****************************
    CARD
 *****************************/
-
 div.card_container {
   min-height: 42rem;
   background-color: var(--bg-terciary-color);
@@ -397,25 +349,18 @@ div.card_container {
   flex-direction: column;
   align-items: center;
   width: 100%;
-
   margin-top: 1rem;
-  /*   background-color: orange; */
 }
-
 div.card_image,
 div.card_content {
-  /* width: 92%; */
   padding: 1.5rem;
 }
-
 div.card_content {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 0 1.5rem;
-  /* background-color: orange; */
   position: relative;
 }
 div.card_content h3 {
@@ -424,29 +369,10 @@ div.card_content h3 {
 div.card_content p {
   margin-top: 0.8rem;
   flex-grow: 1;
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp */
-  /* https://css-tricks.com/almanac/properties/l/line-clamp/ */
-  /* display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;  
-  overflow: hidden; */
 }
-/* .truncate {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-} */
 div.card_content .bgeneral {
-  /* position: absolute;
-  right: 1.5rem;
-  bottom: 0; */
   align-self: flex-end;
   margin-bottom: 1.5rem;
-
-  /* justify-self: flex-end; */
-
-  /*  margin-top: 1.5rem; */
-  /* margin-bottom: 2rem; */
 }
 /****************************
      PAGINA DETALLES GENERAL
@@ -455,19 +381,12 @@ main.detalle {
   background-color: var(--bg-color);
   color: var(--terciary-color);
 }
-
-/* main.detalle a {
-  color: var(--cuaternary-color);
-} */
 ul.breadcrumb {
   list-style: none;
   display: flex;
-  /* padding-top: calc(var(--alto-header) + 1rem); */
 }
 ul.breadcrumb > li {
   display: inline-block;
-
-  /* position: relative; */
 }
 ul.breadcrumb li a {
   color: var(--terciary-color);
@@ -483,10 +402,7 @@ ul.breadcrumb li + li::before {
   color: var(--terciary-color);
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-
-  /* position: absolute; */
 }
-
 figcaption {
   text-align: right;
   font-size: 1rem;
@@ -498,26 +414,20 @@ figcaption a {
 figure img {
   border: 15px solid white;
 }
-
 div.intro p {
   margin-top: 1rem;
   font-size: 1.8rem;
   letter-spacing: 0rem;
   line-height: 2.5rem;
 }
-
 div.grid-detalle aside {
   margin-top: 3rem;
 }
 div.grid__relacionados {
-  /* margin-top: 8rem; */
   display: grid;
   gap: 2rem;
   grid-gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
 }
 section.lista_categorias {
   margin-top: 2rem;
@@ -549,7 +459,6 @@ section.lista_categorias ul > li > a {
 section.lista_categorias ul > li > a:hover {
   color: var(--cuaternary-color);
 }
-
 main.categoria h1 + ul > li {
   border: 3px solid var(--cuaternary-color);
   font-size: 1.8rem;
@@ -565,7 +474,6 @@ main.categoria h1 + ul > li:hover {
 main.categoria h1 + ul > li > a:hover {
   color: var(--cuaternary-color);
 }
-
 div.grid__relacionados > article > div.card_container {
   background-color: var(--primary-color);
 }
@@ -581,7 +489,6 @@ div.listas_componentes section h3 {
   background-color: var(--primary-color);
   padding: 1.5rem 1rem;
   text-align: center;
-  /* box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.3); */
 }
 div.listas_componentes dl > dt {
   font-weight: bold;
@@ -596,24 +503,20 @@ div.listas_componentes dl > dt + dd {
 ol.giras {
   font-size: 1.6rem;
   list-style-position: inside;
-  /* list-style: none; */
 }
 ol.giras li:not(:first-of-type) {
   margin-top: 1rem;
 }
-
 /*Esta clase añadirá una barra de desplazamiento horizontal cuando sea necesario para que los usuarios que vean la tabla en dispositivos pequeños puedan desplazarse hacia la derecha para ver el contenido completo de la tabla */
 .table-fluid {
   width: 100%;
   overflow-x: auto;
   margin-top: 30px;
 }
-
 table {
   width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
-  /*  background-color: var(--primary-color); */
 }
 caption {
   font-size: 1.6rem;
@@ -641,7 +544,6 @@ tbody tr:nth-child(odd) {
 tfoot {
   border-bottom: 1px solid var(--primary-color);
 }
-
 /****************************
      PAGINA PRESENTACION
 *****************************/
@@ -654,11 +556,6 @@ span.name_web_presentacion {
   color: var(--cuaternary-color);
   font-size: 3.5rem;
 }
-
-/****************************
-     PAGINA HISTORIA
-*****************************/
-
 /****************************
      PAGINA NOTICIA
 *****************************/
@@ -669,12 +566,9 @@ div.noticia {
   background-color: var(--primary-color);
 }
 div.noticia_imagen {
-  /* width: 30%; */
   border: 10px solid var(--primary-color);
 }
 div.noticia_content {
-  /*  width: 70%; */
-
   padding: 0 3rem;
   height: 100%;
 }
@@ -696,18 +590,12 @@ ul.paginacion li a:not(.flecha_l, .flecha_r) {
   padding: 0.8rem 0.7rem;
   transition: all 200ms ease;
 }
-/* ul.paginacion i {
-  color: var(--cuaternary-color);
-} */
 ul.paginacion .flecha_l {
   margin-right: 2rem;
 }
 ul.paginacion .flecha_r {
   margin-left: 2rem;
 }
-/* ul.paginacion .flecha:first-child {
-  margin-left: 2rem;
-} */
 ul.paginacion li.active a,
 ul.paginacion a:hover:not(.flecha_l, .flecha_r) {
   /* El border es para igualar el tamaño. sino se ve 1px más pequeño. */
@@ -715,7 +603,6 @@ ul.paginacion a:hover:not(.flecha_l, .flecha_r) {
   border: 1px solid var(--quinary-color);
   color: var(--cuaternary-color);
 }
-
 /****************************
      PAGINA ENLACES
 *****************************/
@@ -723,8 +610,6 @@ div.grid_enlaces_imagenes {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  /*  flex-wrap: wrap;
-  justify-content: space-between; */
 }
 div.grid_enlaces_imagenes figure {
   height: 200px;
@@ -737,28 +622,24 @@ div.grid_enlaces_imagenes figure img {
   height: 20rem;
   object-fit: cover;
 }
-
 div.referencia_texto {
   margin-top: 5rem;
   display: flex;
   align-items: center;
 }
-div.referencia_texto p{
+div.referencia_texto p {
   margin-bottom: 0;
   margin-left: 1rem;
-
 }
 div.referencia_texto a {
   color: var(--cuaternary-color);
 }
-
 /****************************
    FOOTER
 *****************************/
 footer.footer {
   background-color: var(--bg-extremos);
   min-height: 15rem;
-  /* height: 25%; */
 }
 footer.footer ul.smedia_menu_footer {
   display: flex;
@@ -786,7 +667,6 @@ footer.footer ul.legal {
   margin-top: 4rem;
   padding-bottom: 5rem;
 }
-
 footer.footer ul.legal li {
   margin: 0.5rem 0rem;
 }
@@ -811,15 +691,12 @@ footer.footer > p {
 .container {
   max-width: 1140px;
   width: 80%;
-
-  /* width: 100%; */
   margin-left: auto;
   margin-right: auto;
 }
 .container_categoria {
   margin-top: 3rem;
   width: 80%;
-
   margin: 0 auto;
   padding-bottom: 5rem;
 }
@@ -827,12 +704,7 @@ footer.footer > p {
   color: var(--cuaternary-color);
   cursor: pointer;
 }
-/* .enlace:hover {
-  color: var(--secondary-color);
-}
-.fa-brands:hover {
-  color: var(--cuaternary-color);
-} */
+
 .logo {
   width: 8rem;
   height: 8rem;
@@ -846,7 +718,6 @@ footer.footer > p {
   display: block;
   width: 100%;
   padding-top: calc(var(--alto-header) + 1rem);
-  /* display: none; */
 }
 .banner_fluid img {
   width: 100%;
@@ -858,12 +729,9 @@ footer.footer > p {
   color: var(--bg-color);
   font-size: 1.5rem;
   padding: 1.2rem 1.2rem;
-  /* margin-top: 4rem; */
-  /* width: 100%; */
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  /* text-transform: uppercase; */
 }
 .bgeneral .fa-chevron-right {
   margin-left: 2rem;
@@ -871,19 +739,10 @@ footer.footer > p {
 .bgeneral:hover {
   background-color: var(--terciary-color);
 }
-
-/* .parrafo_imagen {
-  margin-top: 2rem;
-  width: 100%;
-} */
-
 .parrafo_imagen img {
   width: 100%;
   margin-bottom: 2rem;
 }
-/* .clearfix {
-  clear: both;
-} */
 .grid-videos {
   margin-top: 3rem;
   display: grid;
@@ -893,14 +752,6 @@ footer.footer > p {
   font-weight: bold;
   font-style: italic;
 }
-/* .parrafo_imagen p {
-  margin-top: 2rem;
-} */
-
-/* .parrafo_imagen img {
-  object-fit: contain;
-  width: 100%;
-} */
 @media (min-width: 530px) {
   /****************************
      PAGINA ENLACES
@@ -919,7 +770,6 @@ footer.footer > p {
   main:not(.index) {
     padding-top: 1rem;
   }
-
   /****************************
        PAGINA CATEGORIA
   *****************************/
@@ -963,14 +813,11 @@ footer.footer > p {
   div.grid__relacionados {
     grid-template-columns: repeat(2, 1fr);
   }
-
   div.noticia {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
   }
   div.noticia_imagen {
-    /*   width: 50%;
-    height: 100%; */
     grid-column: 1/3;
   }
   div.noticia_content {
@@ -997,9 +844,7 @@ footer.footer > p {
   }
   nav.menu_principal {
     width: 90%;
-    /*  margin-left: 0rem; */
   }
-
   button.bburguer {
     display: none;
   }
@@ -1009,7 +854,6 @@ footer.footer > p {
   nav div.name_web {
     display: none;
   }
-
   header.header ul.opciones_menu {
     /* le añado el important porque al modificar
     con javascript el css lo añade en linea y por tanto 
@@ -1029,7 +873,6 @@ footer.footer > p {
     margin: 1rem 2rem;
     border-bottom: inherit;
   }
-
   header.header ul.opciones_menu > li > a {
     color: var(--primary-color);
     display: inherit;
@@ -1042,7 +885,6 @@ footer.footer > p {
   header.header ul.opciones_menu > li > a:hover {
     color: var(--cuaternary-color);
   }
-
   header.header ul.smedia_menu {
     display: flex;
     list-style: none;
@@ -1056,15 +898,9 @@ footer.footer > p {
   /****************************
        PAGINA INDEX
   *****************************/
-  /* main.index {
-    background-position: right 110% top 0rem;
-  } */
   .splide {
     height: 85vh;
   }
-  /* .banner {
-    top: inherit;
-  } */
   .banner_top {
     top: 3rem;
   }
@@ -1127,16 +963,6 @@ footer.footer > p {
     grid-template-columns: repeat(1, 1fr);
   }
   /****************************
-       PAGINA DETALLE
-  *****************************/
-  /* div.grid-detalle {
-    display: grid;
-  }
-  div.grid__relacionados {
-    grid-template-columns: repeat(3, 1fr);
-  } */
-
-  /****************************
      PAGINA ENLACES
 *****************************/
   div.grid_enlaces_imagenes {
@@ -1148,45 +974,4 @@ footer.footer > p {
   .grid-videos {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-/************************************************************************
-                                    min-width: 1200px
-  ************************************************************************/
-@media (min-width: 1200px) {
-  /****************************
-       PAGINA DETALLE
-  *****************************/
-  /* div.grid-detalle aside {
-    margin-top: 0rem;
-  }
-  section.relacionados > h3 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .banner_bottom {
-    bottom: 20rem;
-  }
-  div.grid-detalle {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 2rem;
-    grid-gap: 2rem;
-  }
-  
-  div.grid-detalle > *:first-child {
-    grid-column: 1/9;
-  }
-  div.grid-detalle aside {
-    grid-column: 9/13;
-  }
-  div.grid__relacionados {
-    grid-template-columns: repeat(1, 1fr);
-  } */
-  /* section.relacionados {
-    margin-top: 2rem;
-  } */
-}
-/************************************************************************
-                                    min-width: 1800px
-  ************************************************************************/
-@media (min-width: 1800px) {
 }
