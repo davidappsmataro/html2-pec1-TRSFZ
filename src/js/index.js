@@ -1,6 +1,5 @@
 import Splide from "@splidejs/splide";
 
-
 /****************************
      SPLIDE - IMDEX.HTML
 *****************************/
@@ -14,12 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
     new Splide("#fullscreen-carousel", {
       width: "100vw",
       height: "100vh",
-       type: "loop",
+      type: "loop",
       autoplay: "play",
     }).mount();
   }
 });
-
 
 /****************************
      MENÚ BURGUER
@@ -61,3 +59,29 @@ document.onclick = (e) => {
     opcionesMenu.style.display = "none";
   }
 };
+
+/****************************
+  ANULAR ENVIO NEWSLETTER
+*****************************/
+/* compruebo si los valores son correctos. Sino muestro mensaje de error */
+const suscribirse = document.querySelector("button[type=submit]");
+const nombre = document.querySelector("input[name='name']");
+const email = document.querySelector("input[name='email']");
+
+suscribirse.addEventListener("click", (e) => {
+  if (nombre.value.length > 0 && email.value.length > 0) {
+    e.preventDefault();
+    alert("Envío no implementado");
+    
+  } 
+});
+
+/****************************
+  PAGINACION SIN IMPLEMENTAR
+*****************************/
+
+const paginacion = document.querySelector("ul.paginacion");
+paginacion.addEventListener("click", (e) => {
+  e.preventDefault();
+  alert("Paginación no implementada");
+});

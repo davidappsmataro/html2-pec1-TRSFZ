@@ -82,7 +82,7 @@ main.enlaces h3 {
 main.enlaces article > section:not(:first-of-type) {
   margin-top: 6rem;
 }
-main p {
+main p, form {
   font-size: 1.5rem;
   line-height: 2.2rem;
   letter-spacing: 0.1rem;
@@ -180,7 +180,7 @@ iframe.youtube {
 main {
   background-color: var(--bg-secondary-color);
   min-height: 100vh;
-  padding-bottom: 6rem;
+  /* padding-bottom: 6rem; */
 }
 div.divlogo a {
   display: flex;
@@ -635,6 +635,60 @@ div.referencia_texto a {
   color: var(--cuaternary-color);
 }
 /****************************
+   NEWSLETTER
+*****************************/
+div.newsletter {
+  margin-top: 6rem;
+  background-color: var(--terciary-color);
+  color: var(--primary-color);
+  padding: 5rem 0;
+}
+div.newsletter h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  font-size: 2em;
+}
+form ul {
+   list-style: none;
+}
+input[type="text"],
+input[type="email"]
+ {
+  background-color: var(--bg-color);
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  height: 4.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+form {
+  display: grid;
+ 
+}
+form ul {
+  display: grid;
+  
+}
+form input {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+form button.bgeneral {
+  width: 40%;
+  height: 4.3rem;
+  min-width: 13rem;
+  border-radius: 0;
+  justify-self: end;
+ 
+  
+}
+form button.bgeneral:hover {
+  background-color: var(--secondary-color);
+}
+/****************************
    FOOTER
 *****************************/
 footer.footer {
@@ -831,6 +885,35 @@ footer.footer > p {
     margin-bottom: 0;
     margin-top: 0.5rem;
   }
+
+/****************************
+     NEWSLETTER
+*****************************/
+
+.newsletter form {
+  grid-template-columns: repeat(12, 1fr);
+  align-content: center;
+  gap: 1rem;
+}
+.newsletter ul {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.newsletter ul input {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.newsletter form button.bgeneral {
+ 
+  width: 100%;
+}
+.newsletter form ul {
+  grid-column: 1/10;
+}
+.newsletter form button {
+  grid-column: 10/13;
+}
+
 }
 /************************************************************************
                                     min-width: 992px
