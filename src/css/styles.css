@@ -82,7 +82,8 @@ main.enlaces h3 {
 main.enlaces article > section:not(:first-of-type) {
   margin-top: 6rem;
 }
-main p, form {
+main p,
+form {
   font-size: 1.5rem;
   line-height: 2.2rem;
   letter-spacing: 0.1rem;
@@ -180,7 +181,16 @@ iframe.youtube {
 main {
   background-color: var(--bg-secondary-color);
   min-height: 100vh;
-  /* padding-bottom: 6rem; */
+
+}
+
+div.divlogo {
+  width: 50%;
+}
+
+div.bburguer_container {
+  text-align: end;
+  width: 50%;
 }
 div.divlogo a {
   display: flex;
@@ -207,9 +217,19 @@ section.splide .banner {
 @media (min-width: 350px) {
   div.name_web {
     display: block;
+    width: 60%;
+    text-align: center;
   }
   section.splide .banner {
     display: block;
+  }
+  div.divlogo {
+    width: 20%;
+  }
+
+  div.bburguer_container {
+    text-align: end;
+    width: 20%;
   }
 }
 span.comentarios {
@@ -650,11 +670,13 @@ div.newsletter h2 {
   font-size: 2em;
 }
 form ul {
-   list-style: none;
+  list-style: none;
+}
+form ul li {
+  margin-bottom: 1rem;
 }
 input[type="text"],
-input[type="email"]
- {
+input[type="email"] {
   background-color: var(--bg-color);
   border: none;
   font-size: 1.3rem;
@@ -666,15 +688,12 @@ input[type="email"]
 }
 form {
   display: grid;
- 
 }
 form ul {
   display: grid;
-  
 }
 form input {
   margin-top: 0.5rem;
-  margin-bottom: 2rem;
 }
 form button.bgeneral {
   width: 40%;
@@ -682,11 +701,14 @@ form button.bgeneral {
   min-width: 13rem;
   border-radius: 0;
   justify-self: end;
- 
-  
 }
 form button.bgeneral:hover {
   background-color: var(--secondary-color);
+}
+span.error {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: var(--cuaternary-color);
 }
 /****************************
    FOOTER
@@ -886,34 +908,32 @@ footer.footer > p {
     margin-top: 0.5rem;
   }
 
-/****************************
+  /****************************
      NEWSLETTER
 *****************************/
 
-.newsletter form {
-  grid-template-columns: repeat(12, 1fr);
-  align-content: center;
-  gap: 1rem;
-}
-.newsletter ul {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-.newsletter ul input {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.newsletter form button.bgeneral {
- 
-  width: 100%;
-}
-.newsletter form ul {
-  grid-column: 1/10;
-}
-.newsletter form button {
-  grid-column: 10/13;
-}
-
+  .newsletter form {
+    grid-template-columns: repeat(12, 1fr);
+    align-content: center;
+    gap: 1rem;
+  }
+  .newsletter ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .newsletter ul input {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .newsletter form button.bgeneral {
+    width: 100%;
+  }
+  .newsletter form ul {
+    grid-column: 1/10;
+  }
+  .newsletter form button {
+    grid-column: 10/13;
+  }
 }
 /************************************************************************
                                     min-width: 992px
@@ -928,7 +948,7 @@ footer.footer > p {
   nav.menu_principal {
     width: 90%;
   }
-  button.bburguer {
+  div.bburguer_container {
     display: none;
   }
   nav div.name_web_in_logo {
@@ -951,6 +971,7 @@ footer.footer > p {
     background-color: inherit;
     padding: inherit;
     z-index: inherit;
+    width: 60%;
   }
   header.header ul.opciones_menu > li {
     margin: 1rem 2rem;
@@ -971,6 +992,11 @@ footer.footer > p {
   header.header ul.smedia_menu {
     display: flex;
     list-style: none;
+    width: 20%;
+    justify-content: end;
+  }
+  header.header div.divlogo {
+    width: 30%;
   }
   main:not(.index) {
     padding-top: 1rem;
