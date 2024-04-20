@@ -6,6 +6,7 @@
   --secondary-color-alpha: rgba(255, 255, 255, 0.8);
   --terciary-color: rgba(91, 91, 91, 1);
   --cuaternary-color: rgba(255, 45, 48, 1);
+  --cuaternary-color-alpha: rgba(255, 45, 48, 0.6);
   --quinary-color: rgba(0, 0, 0, 1);
   --bg-color: rgb(232, 232, 232);
   --bg-secondary-color: rgba(20, 20, 20, 1);
@@ -47,6 +48,7 @@ a {
 .detalle a,
 main.enlaces a {
   color: var(--cuaternary-color);
+  transition: all 500ms ease;
 }
 .detalle a:hover,
 main.enlaces a:hover {
@@ -68,7 +70,7 @@ h1 {
 h2 {
   font-weight: 300;
 
-  color: var(--terciary-color);
+  color: var(--bg-color);
 }
 .detalle h2 {
   color: var(--quinary-color);
@@ -385,6 +387,8 @@ div.card_content {
 }
 div.card_content h3 {
   text-transform: uppercase;
+  color: var(--cuaternary-color);
+ 
 }
 div.card_content p {
   margin-top: 0.8rem;
@@ -394,6 +398,7 @@ div.card_content .bgeneral {
   align-self: flex-end;
   margin-bottom: 1.5rem;
 }
+
 /****************************
      PAGINA DETALLES GENERAL
 *****************************/
@@ -702,9 +707,7 @@ form button.bgeneral {
   border-radius: 0;
   justify-self: end;
 }
-form button.bgeneral:hover {
-  background-color: var(--secondary-color);
-}
+
 span.error {
   display: inline-block;
   font-size: 1.1rem;
@@ -808,17 +811,23 @@ footer.footer > p {
   display: inline-block;
   text-align: center;
   cursor: pointer;
+  transition: all 500ms ease;
 }
 .bgeneral .fa-chevron-right {
   margin-left: 2rem;
 }
 .bgeneral:hover {
-  background-color: var(--terciary-color);
+  background-color: var(--cuaternary-color-alpha);
+  
 }
 .parrafo_imagen img {
   width: 100%;
   margin-bottom: 2rem;
+  border: 3px solid var(--primary-color);
 }
+/* .parrafo_imagen p {
+  color: var(--secondary-color-alpha)
+} */
 .grid-videos {
   margin-top: 3rem;
   display: grid;
