@@ -45,6 +45,7 @@ a {
   color: var(--primary-color);
   cursor: pointer;
 }
+
 .detalle a,
 main.enlaces a {
   color: var(--cuaternary-color);
@@ -81,6 +82,7 @@ main.enlaces h3 {
   border-bottom: 2px solid var(--primary-color);
   padding-bottom: 1rem;
 }
+
 main.enlaces article > section:not(:first-of-type) {
   margin-top: 6rem;
 }
@@ -98,6 +100,9 @@ q,
 cite {
   font-weight: 700;
   font-style: italic;
+}
+q {
+  quotes: "«" "»";
 }
 blockquote {
   width: 90%;
@@ -567,6 +572,16 @@ tbody tr:nth-child(odd) {
 tfoot {
   border-bottom: 1px solid var(--primary-color);
 }
+
+ul.lista_articulos_relacionados {
+  /* list-style: none; */
+  list-style-position: inside;
+  font-size: 1.6rem;
+
+}
+ul.lista_articulos_relacionados li {
+  margin: 1rem 0rem;
+}
 /****************************
      PAGINA PRESENTACION
 *****************************/
@@ -834,6 +849,11 @@ footer.footer > p {
   font-weight: bold;
   font-style: italic;
 }
+.articulos_relacionados {
+  margin-top: 5rem;
+  border-bottom: 2px solid var(--cuaternary-color);
+  padding-bottom: 1rem;
+}
 @media (min-width: 530px) {
   /****************************
      PAGINA ENLACES
@@ -885,6 +905,9 @@ footer.footer > p {
     width: 50%;
     margin-right: 2rem;
     margin-bottom: 1rem;
+  }
+  .parrafo_imagen img.reducida {
+    width: 40%;
   }
   /****************************
      PAGINA DETALLES GENERAL
