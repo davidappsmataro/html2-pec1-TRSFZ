@@ -275,8 +275,6 @@ div.flex-elements {
   justify-content: space-between;
 }
 
-
-
 /****************************
      PAGINA LOADER ANIMACION
 *****************************/
@@ -300,7 +298,6 @@ div.flex-elements {
   100% {
     /* transform: translateY(center); */
     font-size: 10rem;
-   
   }
 }
 @keyframes movimientofocos {
@@ -313,7 +310,7 @@ div.flex-elements {
 }
 div.portada {
   position: relative;
-  display: none;
+  /*  display: block; */
 }
 div.loader {
   width: 100vw;
@@ -339,7 +336,7 @@ div.escena__foco {
   position: absolute;
 }
 div.escena__intro__fondo {
-  background: linear-gradient(180deg, black, rgba(87, 63, 223, 0.8));;
+  background: linear-gradient(180deg, black, rgba(87, 63, 223, 0.8));
   opacity: 0.7;
   width: 100%;
   height: 100%;
@@ -355,7 +352,7 @@ div.foco1 {
   z-index: 200;
   /* right: 0; */
   animation: movimientofocos 5s infinite alternate ease both;
-  
+
   animation-delay: 2s;
 }
 div.foco2 {
@@ -369,9 +366,8 @@ div.foco2 {
   animation: movimientofocos 4s infinite alternate ease both;
 }
 div.loader img {
-   width: 20%;
-   z-index: 300;
-
+  width: 20%;
+  z-index: 300;
 }
 p.loader__logo1,
 p.loader__logo2 {
@@ -391,7 +387,6 @@ p.loader__logo2 {
 p.loader__loading_text {
   font-size: 3rem;
   margin-top: 5rem;
-
 }
 div.loader button {
   width: 30%;
@@ -399,7 +394,6 @@ div.loader button {
   font-size: 3rem;
   background-color: black;
   z-index: 300;
-  
 }
 /****************************
      PAGINA INDEX
@@ -857,6 +851,9 @@ span.error {
 footer.footer {
   background-color: var(--bg-extremos);
   min-height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 footer.footer ul.smedia_menu_footer {
   display: flex;
@@ -868,39 +865,58 @@ footer.footer ul.smedia_menu_footer li {
   display: flex;
   padding: 1rem;
 }
-footer.footer ul.smedia_menu_footer li a {
+footer.footer ul li a {
   color: var(--primary-color);
 }
-footer.footer ul.smedia_menu_footer li a:hover {
+footer.footer ul li a:hover {
   color: var(--cuaternary-color);
-  transition: all 200ms ease-out;
+  transition: color 200ms ease-out;
 }
-footer.footer ul.legal {
+footer ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+footer.footer div.footer__enlaces {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+}
+footer.footer div.footer__enlaces__paginas,
+div.footer__enlaces__terminos {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  list-style: none;
-  margin-top: 4rem;
-  padding-bottom: 5rem;
 }
-footer.footer ul.legal li {
+footer.footer ul:not(.smedia_menu_footer) {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+footer.footer div.footer__enlaces h3 {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cuaternary-color);
+}
+footer.footer ul li {
   margin: 0.5rem 0rem;
 }
-footer.footer ul.legal li a {
-  color: var(--primary-color);
-  text-transform: uppercase;
-  transition: all 200ms ease-out;
-}
-footer.footer ul.legal li a:hover {
-  color: var(--cuaternary-color);
-}
+
 footer.footer > p {
   text-align: center;
   padding-bottom: 5rem;
   color: var(--cuaternary-color);
   text-transform: uppercase;
   font-size: 1rem;
+}
+
+footer img {
+  width: 15rem;
+  margin-top: 2rem;
+}
+footer p {
+  margin-top: 5rem;
 }
 /****************************
     CLASES
@@ -1088,6 +1104,24 @@ footer.footer > p {
   .newsletter form button {
     grid-column: 10/13;
   }
+  /****************************
+     FOOTER
+*****************************/
+  footer.footer div.footer__enlaces {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+  }
+  footer.footer div.footer__enlaces__paginas {
+    align-items: start;
+  }
+  footer.footer ul.footer__enlaces__lista__paginas {
+    align-items: start;
+  }
+  footer.footer ul.legal {
+    align-items: end;
+  }
 }
 /************************************************************************
                                     min-width: 992px
@@ -1236,6 +1270,48 @@ footer.footer > p {
   *****************************/
   .grid-videos {
     grid-template-columns: repeat(2, 1fr);
+  }
+  /****************************
+     FOOTER
+*****************************/
+  footer.footer div.footer__enlaces {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer.footer div.footer__enlaces__paginas {
+    align-items: center;
+  }
+
+  footer.footer ul.footer__enlaces__lista__paginas {
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+  footer.footer div.footer__enlaces ul > li {
+    position: relative;
+  }
+  footer.footer div.footer__enlaces ul > li:not(:first-child) {
+    padding-left: 2rem;
+  }
+  footer.footer div.footer__enlaces ul > li:not(:last-child) {
+    margin-right: 0.3rem;
+  }
+  footer.footer div.footer__enlaces ul > li:not(li:first-child)::before {
+    content: "";
+    border-left: 2px solid var(--cuaternary-color);
+    height: 10%;
+    left: 0;
+    position: absolute;
+    top: 40%;
+  }
+  footer.footer div.footer__enlaces li {
+    margin: 0px 1.4rem;
+  }
+  footer.footer div.footer__enlaces__terminos {
+    margin-top: 3rem;
+  }
+  footer.footer ul.legal {
+    flex-direction: row;
   }
 }
 
