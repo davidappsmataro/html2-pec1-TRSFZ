@@ -1,4 +1,14 @@
-
+/* const audio1 = document.querySelector('audio');
+audio1.preload = "auto";
+audio1.play(); */
+const bLoader=document.querySelector('div.loader > button');
+const escenaIntro=document.querySelector('div.escena__intro');
+const portada=document.querySelector('div.portada');
+bLoader.addEventListener("click",()=>{
+  console.log('clik')
+  escenaIntro.style.display="none";
+  portada.style.display="block";
+})
 /****************************
      MENÚ BURGUER
 *****************************/

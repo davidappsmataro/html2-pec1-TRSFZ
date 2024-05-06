@@ -40,6 +40,7 @@ body {
   color: var(--primary-color);
   font-size: 1.35rem;
 }
+
 a {
   text-decoration: none;
   color: var(--primary-color);
@@ -274,10 +275,135 @@ div.flex-elements {
   justify-content: space-between;
 }
 
+
+
+/****************************
+     PAGINA LOADER ANIMACION
+*****************************/
+@keyframes movimientotitulo {
+  0% {
+    transform: translateY(-500px);
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  30% {
+    transform: rotate(360deg);
+  }
+  80% {
+    transform: scale(2);
+  }
+  90% {
+    /* transform: translateY(calc((100% / 2 -200px))); */
+    /* font-size: 3rem; */
+  }
+  100% {
+    /* transform: translateY(center); */
+    font-size: 10rem;
+   
+  }
+}
+@keyframes movimientofocos {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+}
+div.portada {
+  position: relative;
+  display: none;
+}
+div.loader {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: black; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+  /* position: absolute;
+  top: 0;
+  z-index: 99; */
+}
+div.escena__intro {
+  position: relative;
+  overflow: hidden;
+  background-image: url("../assets/concert-3387324_1920.jpg");
+  background-color: black;
+}
+div.escena__foco {
+  position: absolute;
+}
+div.escena__intro__fondo {
+  background: linear-gradient(180deg, black, rgba(87, 63, 223, 0.8));;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  position: absolute;
+}
+
+div.foco1 {
+  /*  margin-left: auto;
+  margin-right: auto; */
+  top: -200;
+  left: 0;
+  z-index: 200;
+  /* right: 0; */
+  animation: movimientofocos 5s infinite alternate ease both;
+  
+  animation-delay: 2s;
+}
+div.foco2 {
+  /* margin-left: auto;
+  margin-right: auto; */
+  top: -200;
+  right: 0;
+  z-index: 200;
+  /*  left: 0; */
+
+  animation: movimientofocos 4s infinite alternate ease both;
+}
+div.loader img {
+   width: 20%;
+   z-index: 300;
+
+}
+p.loader__logo1,
+p.loader__logo2 {
+  font-family: var(--secondary-font);
+  text-shadow: 5px 5px 5px black;
+  z-index: 300;
+}
+
+p.loader__logo1 {
+  animation: movimientotitulo 2s ease-in-out both;
+  z-index: 300;
+}
+p.loader__logo2 {
+  color: var(--cuaternary-color);
+  font-size: 10rem;
+}
+p.loader__loading_text {
+  font-size: 3rem;
+  margin-top: 5rem;
+
+}
+div.loader button {
+  width: 30%;
+  margin-top: 5rem;
+  font-size: 3rem;
+  background-color: black;
+  z-index: 300;
+  
+}
 /****************************
      PAGINA INDEX
 *****************************/
-
 main.index {
   height: 100vh;
   width: 100vw;
@@ -577,7 +703,6 @@ ul.lista_articulos_relacionados {
   /* list-style: none; */
   list-style-position: inside;
   font-size: 1.6rem;
-
 }
 ul.lista_articulos_relacionados li {
   margin: 1rem 0rem;
@@ -1122,9 +1247,8 @@ footer.footer > p {
   header.header ul.opciones_menu > li {
     margin: 1rem 0.9rem;
   }
-  header.header ul.opciones_menu > li > a { 
+  header.header ul.opciones_menu > li > a {
     font-size: 1.5rem;
-    
   }
   header.header ul.smedia_menu {
     display: flex;

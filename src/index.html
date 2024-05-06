@@ -22,68 +22,95 @@
     />
   </head>
   <body>
-    <include src="./src/components/header.html"></include>
-    <main class="index">
-      <section
-        id="fullscreen-carousel"
-        class="splide"
-        aria-label="Splide de imágenes de Los Rolling Stones"
+    <div class="portada">
+      <include src="./src/components/header.html"></include>
+      <main class="index">
+        <section
+          id="fullscreen-carousel"
+          class="splide"
+          aria-label="Splide de imágenes de Los Rolling Stones"
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="banner banner_top container">
+                  <div class="banner__container">
+                    <p class="banner__text__secondary">Historia</p>
+                    <p class="banner__text">Un Repaso a la trayectoria...</p>
+                    <p class="banner__text__terciary">La banda más longeva</p>
+                    <a href="historia.html" class="bgeneral">+info</a>
+                  </div>
+                </div>
+                <img
+                  src="assets/The_Rolling_Stones,_Prudential_Center_2012-12-13.jpeg"
+                  alt="en concierto"
+                />
+              </li>
+              <li class="splide__slide">
+                <div class="banner banner_bottom container">
+                  <div class="banner__container">
+                    <p class="banner__text__secondary">Nuevo Disco</p>
+                    <p class="banner__text">Hackney Diamonds</p>
+                    <p class="banner__text__terciary">
+                      Es el álbum de estudio número 24
+                    </p>
+                    <a href="discografia.html#hackney" class="bgeneral"
+                      >+info</a
+                    >
+                  </div>
+                </div>
+
+                <img
+                  src="assets/Rolling_Stones_bow_post-show,_London,_22_May_2018_(41437870545).jpeg"
+                  alt="Imágen de los integrantes de la banda de los Rolling Stones"
+                />
+              </li>
+
+              <li class="splide__slide">
+                <div class="banner banner_bottom container">
+                  <div class="banner__container">
+                    <p class="banner__text__secondary">Stones Tour'24</p>
+                    <p class="banner__text">Hackney Diamonds.</p>
+                    <p class="banner__text__terciary">
+                      Por Estados Unidos y Canadá
+                    </p>
+                    <a href="giras.html" class="bgeneral">+info</a>
+                  </div>
+                </div>
+                <img
+                  src="assets/Rolling_Stones_stage_pre-show_Hyde_Park_-_13_July_2013.jpeg"
+                  alt="Imágen de un concierto con la gente esperando y el escenario con el logo de los Rolling stones conmemorando 50 aniversario."
+                />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <include src="./src/components/footer.html"></include>
+    </div>
+    <div class="escena__intro">
+      <audio
+        src="./assets/78583__robinhood76__01244-applause-55-long-concert-screamy.mp3"
       >
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="banner banner_top container">
-                <div class="banner__container">
-                  <p class="banner__text__secondary">Historia</p>
-                  <p class="banner__text">Un Repaso a la trayectoria...</p>
-                  <p class="banner__text__terciary">La banda más longeva</p>
-                  <a href="historia.html" class="bgeneral">+info</a>
-                </div>
-              </div>
-              <img
-                src="assets/The_Rolling_Stones,_Prudential_Center_2012-12-13.jpeg"
-                alt="en concierto"
-              />
-            </li>
-            <li class="splide__slide">
-              <div class="banner banner_bottom container">
-                <div class="banner__container">
-                  <p class="banner__text__secondary">Nuevo Disco</p>
-                  <p class="banner__text">Hackney Diamonds</p>
-                  <p class="banner__text__terciary">
-                    Es el álbum de estudio número 24
-                  </p>
-                  <a href="discografia.html#hackney" class="bgeneral">+info</a>
-                </div>
-              </div>
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+      <div class="escena__intro__fondo"></div>
 
-              <img
-                src="assets/Rolling_Stones_bow_post-show,_London,_22_May_2018_(41437870545).jpeg"
-                alt="Imágen de los integrantes de la banda de los Rolling Stones"
-              />
-            </li>
+      <div class="escena__foco foco1">
+        <img class="img_fluid" src="./assets/foco.png" />
+      </div>
+      <div class="escena__foco foco2">
+        <img class="img_fluid" src="./assets/foco.png" />
+      </div>
 
-            <li class="splide__slide">
-              <div class="banner banner_bottom container">
-                <div class="banner__container">
-                  <p class="banner__text__secondary">Stones Tour'24</p>
-                  <p class="banner__text">Hackney Diamonds.</p>
-                  <p class="banner__text__terciary">
-                    Por Estados Unidos y Canadá
-                  </p>
-                  <a href="giras.html" class="bgeneral">+info</a>
-                </div>
-              </div>
-              <img
-                src="assets/Rolling_Stones_stage_pre-show_Hyde_Park_-_13_July_2013.jpeg"
-                alt="Imágen de un concierto con la gente esperando y el escenario con el logo de los Rolling stones conmemorando 50 aniversario."
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
-    </main>
-    <include src="./src/components/footer.html"></include>
+      <div class="loader">
+        <img src="./assets/logo.png" alt="Logo de The Rolling Stones" />
+        <p class="loader__logo1">The Rolling Stones</p>
+        <p class="loader__logo2">Fan Zone</p>
+        <button class="bgeneral">Entrar</button>
+      <!--   <p class="loader__loading_text">Loading...</p> -->
+      </div>
+    </div>
     <include src="./src/components/scripts.html"></include>
     <script type="module" src="js/splide.js"></script>
   </body>
