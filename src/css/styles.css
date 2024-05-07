@@ -131,7 +131,7 @@ header.header {
   justify-content: center;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 header.header ul.smedia_menu li {
   margin: 0rem 0.5rem;
@@ -276,7 +276,7 @@ div.flex-elements {
 }
 
 /****************************
-     PAGINA LOADER ANIMACION
+     PAGINA SALA CONCIERTOS
 *****************************/
 @keyframes movimientotitulo {
   0% {
@@ -308,6 +308,9 @@ div.flex-elements {
     transform: rotate(-40deg);
   }
 }
+main.sala__conciertos {
+  background-color: var(--quinary-color);
+}
 div.portada {
   position: relative;
   /*  display: block; */
@@ -319,7 +322,8 @@ div.loader {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  margin-top: 10rem;
   align-items: center;
   /* position: relative; */
   /* position: absolute;
@@ -331,6 +335,8 @@ div.escena__intro {
   overflow: hidden;
   background-image: url("../assets/concert-3387324_1920.jpg");
   background-color: black;
+  
+ 
 }
 div.escena__foco {
   position: absolute;
@@ -366,28 +372,30 @@ div.foco2 {
   animation: movimientofocos 4s infinite alternate ease both;
 }
 div.loader img {
-  width: 20%;
+  width: 30%;
   z-index: 300;
 }
+
 p.loader__logo1,
 p.loader__logo2 {
   font-family: var(--secondary-font);
   text-shadow: 5px 5px 5px black;
+  font-size: 5rem;
+  line-height: 2rem;
   z-index: 300;
 }
 
 p.loader__logo1 {
+  margin-top: 5rem;
   animation: movimientotitulo 2s ease-in-out both;
   z-index: 300;
 }
 p.loader__logo2 {
-  color: var(--cuaternary-color);
-  font-size: 10rem;
-}
-p.loader__loading_text {
-  font-size: 3rem;
   margin-top: 5rem;
+  color: var(--cuaternary-color);
+  font-size: 8rem;
 }
+
 div.loader button {
   width: 30%;
   margin-top: 5rem;

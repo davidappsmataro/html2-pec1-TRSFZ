@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="David Pecharromán" />
+    <meta
+      name="description"
+      content="Sala dónde podrás escuchar música de Los Rollings Stones como si estuvieras en uno de sus conciertos."
+    />
+    <title>Sala de Conciertos | Fan Zone</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon3.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <include src="./src/components/header.html"></include>
+    <main class="sala__conciertos">
+      <div class="escena__intro">
+        <audio
+          src="./assets/The Rolling Stones - (I Can't Get No) Satisfaction (Official Lyric Video).mp3"
+         
+        >
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+        <div class="escena__intro__fondo"></div>
+
+        <div class="escena__foco foco1">
+          <img class="img_fluid" src="./assets/foco.png" />
+        </div>
+        <div class="escena__foco foco2">
+          <img class="img_fluid" src="./assets/foco.png" />
+        </div>
+
+        <div class="loader">
+          <img src="./assets/logo.png" alt="Logo de The Rolling Stones" />
+          <p class="loader__logo1">The Rolling Stones</p>
+          <p class="loader__logo2">Fan Zone</p>
+        
+        </div>
+      </div>
+    </main>
+    <include src="./src/components/footer.html"></include>
+    <include src="./src/components/scripts.html"></include>
+    <script type="module" src="js/newsletter.js"></script>
+  </body>
+</html>
