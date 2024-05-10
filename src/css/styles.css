@@ -120,6 +120,10 @@ blockquote footer p {
 article > section {
   margin-top: 3rem;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 /****************************
      MENU PRINCIPAL
 *****************************/
@@ -955,6 +959,11 @@ footer p {
   height: auto;
   display: block;
 }
+
+/* .splide__slide img {
+  object-fit: none;
+  
+} */
 .banner_fluid {
   display: block;
   width: 100%;

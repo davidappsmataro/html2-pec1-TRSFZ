@@ -27,11 +27,32 @@
             <h1>NOTICIAS DE LOS ROLLING STONES</h1>
 
             <figure>
+              <!-- class="img_fluid" -->
               <img
-                class="img_fluid"
-                src="./assets/cat-Noticias.jpg"
+              srcset="
+              /src/assets/imagenes/categorias/cat-Noticias480x360.jpg 480w,
+              /src/assets/imagenes/categorias/cat-Noticias614x461.jpg 614w,
+              /src/assets/imagenes/categorias/cat-Noticias.jpg        800w
+              "
+              sizes="(max-width: 480px) 80vw, (max-width: 992px) 80vw, (max-width: 1200px) 51vw, 800px"
+                src="./assets/imagenes/categorias/cat-Noticias.jpg"
                 alt="Imágen del logotipo de los Rolling Stones hecho de neones."
               />
+             <!--  <picture>
+                <source media="(max-width: 480px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=avif&width=480" type="image/avif" />
+                <source media="(max-width: 480px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=webp&width=480" type="image/webp" />
+                <source media="(max-width: 768px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=avif&width=614" type="image/avif" />
+                <source media="(max-width: 768px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=webp&width=614" type="image/webp" />
+                <source media="(max-width: 992px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=avif&width=800" type="image/avif" />
+                <source media="(max-width: 992px)" srcset="assets/imagenes/categorias/cat-Noticias.jpg?as=webp&width=800" type="image/webp" />
+                
+                <img
+                  src="assets/imagenes/categorias/cat-Noticias.jpg"
+                  alt="en concierto"
+                />
+              </picture> -->
+              <!--  width="800"
+                height="600" -->
               <figcaption>
                 <a
                   href="https://commons.wikimedia.org/wiki/File:Rolling_Stones_Tongue_%26_Lips_Logo.jpg"
@@ -125,7 +146,7 @@
                     <abbr title="Central European Time">CEST</abbr></time
                   >
                   <h2>
-                   Mick Jagger: “Para ser honesto, preferiría tener 30 años”
+                    Mick Jagger: “Para ser honesto, preferiría tener 30 años”
                   </h2>
                 </div>
               </div>
