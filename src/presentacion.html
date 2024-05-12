@@ -41,11 +41,44 @@
           </p>
         </section>
         <div class="parrafo_imagen">
-          <img
-            class="img_fluid"
-            src="./assets/Rolling_Stones_Desert_Trip_2016-64.jpg"
-            alt="Imágne de Mick Jagger en concierto"
-          />
+          <picture>
+            <source
+              media="(min-width: 1400px)"
+              srcset="
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp           640w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=512 512w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=410 410w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=350 350w
+              "
+              sizes="(min-width: 1400px) calc(1140px /2), 640px"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp           640w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=512 512w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=410 410w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?as=webp&width=350 350w
+              "
+              sizes="(min-width: 769px) calc(80vw /2), 640px"
+              type="image/webp"
+            />
+            <source
+              srcset="
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp           640w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp&width=512 512w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp&width=410 410w,
+                ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp&width=350 350w
+              "
+              type="image/webp"
+            />
+            <img
+              class="img_fluid"
+              src="./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg"
+              alt="Imágne de Mick Jagger en concierto"
+            />
+          </picture>
           <p>
             The Rolling Stones, más conocido en el mundo hispanohablante como
             los Rolling Stones, es un grupo británico de

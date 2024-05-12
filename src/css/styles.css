@@ -120,10 +120,10 @@ blockquote footer p {
 article > section {
   margin-top: 3rem;
 }
-img {
+/* img {
   display: block;
   max-width: 100%;
-}
+} */
 /****************************
      MENU PRINCIPAL
 *****************************/
@@ -991,7 +991,7 @@ footer p {
   background-color: var(--cuaternary-color-alpha);
 }
 .parrafo_imagen img {
-  width: 100%;
+ /*  width: 100%; */
   margin-bottom: 2rem;
   border: 3px solid var(--primary-color);
 }
@@ -1060,7 +1060,7 @@ footer p {
   }
   .parrafo_imagen img {
     float: left;
-    width: 50%;
+  /*   width: 50%; */
     margin-right: 2rem;
     margin-bottom: 1rem;
   }
