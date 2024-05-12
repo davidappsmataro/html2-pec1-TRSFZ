@@ -13,9 +13,9 @@
       rel="icon"
       type="image/png"
       sizes="512x512"
-      href="assets/favicon3.png"
+      href="/src/assets/favicon3.png"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
   </head>
   <body>
     <include src="./src/components/header.html"></include>
@@ -23,8 +23,8 @@
     <main class="detalle articulo">
       <div class="container">
         <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="/src/index.html">Home</a></li>
+          <li><a href="/src/pages/categories/noticias.html">Noticias</a></li>
           <li class="active">Tour 2024</li>
         </ul>
 
@@ -38,7 +38,7 @@
           <div class="parrafo_imagen">
             <img
               class="img_fluid reducida"
-              src="./assets/Tour2024.jpg"
+              src="/src/assets/Tour2024.jpg"
               alt="Imágen de cara de Mick Jagger."
             />
 
@@ -94,11 +94,11 @@
             <h2 class="articulos_relacionados">Otros Artículos de interés</h2>
             <ul class="lista_articulos_relacionados">
               <li>
-                <a href="mick-jagger.html"
+                <a href="/src/pages/details/mick-jagger.html"
                   >¿Quién es Mick Jagger?</a
                 >.
               </li>
-              <li>Consulta todas las <a href="categoria.html">Categorías</a>.</li>
+              <li>Consulta todas las <a href="/src/categoria.html">Categorías</a>.</li>
             </ul>
           </footer>
         </article>
@@ -107,6 +107,6 @@
     </main>
     <include src="./src/components/footer.html"></include>
     <include src="./src/components/scripts.html"></include>
-    <script type="module" src="js/newsletter.js"></script>
+    <script type="module" src="/src/js/newsletter.js"></script>
   </body>
 </html>
