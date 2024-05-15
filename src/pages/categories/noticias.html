@@ -28,7 +28,7 @@
 
             <figure>
               <img
-                class="img_fluid"
+                class="img_fluid borde_grueso_imagen"
                 srcset="
                   /src/assets/imagenes/categorias/cat-Noticias1000.jpg 1000w,
                   /src/assets/imagenes/categorias/cat-Noticias.jpg      800w,
@@ -71,11 +71,50 @@
               <div class="noticia">
                 <div class="noticia_imagen">
                   <a href="/src/pages/details/gira2024.html">
-                    <img
-                      class="img_fluid"
-                      src="/src/assets/Rolling_Stones_Yellow_Logo_pre-show_14_August_2019_Seattle.jpeg"
-                      alt="Imágen del escenario de un Concierto de Los Rollings Stones"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 769px)"
+                        srcset="
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=385 385w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=300 300w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=250 250w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=200 200w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=120 120w
+                        "
+                        type="image/webp"
+                      />
+                      <source
+                        media="(min-width: 481px)"
+                        srcset="
+                          /src/assets/imagenes/categorias/cat-Giras3520.jpg?as=webp&width=1600 1600w,
+                          /src/assets/imagenes/categorias/cat-Giras3520.jpg?as=webp&width=1250 1250w,
+                          /src/assets/imagenes/categorias/cat-Giras3520.jpg?as=webp&width=1000 1000w,
+                          /src/assets/imagenes/categorias/cat-Giras.jpg?as=webp                 800w,
+                          /src/assets/imagenes/categorias/cat-Giras.jpg?as=webp&width=640       640w,
+                          /src/assets/imagenes/categorias/cat-Giras.jpg?as=webp&width=480       480w
+                        "
+                        sizes="(max-width: 768px) 80vw, 800px"
+                        type="image/webp"
+                      />
+                      <source
+                        media="(max-width: 480px)"
+                        srcset="
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=960 960w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=750 750w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=600 600w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=480 480w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=385 385w,
+                          /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=308 308w
+                        "
+                        sizes="(max-width: 480px) 80vw, 480px"
+                        type="image/webp"
+                      />
+                      <img
+                        class="img_fluid"
+                        src="/src/assets/imagenes/categorias/cat-Giras.jpg"
+                        alt="Concierto de noche de The Rolling Stones en Seattle (Agosto de 2019)"
+                      />
+                    </picture>
                   </a>
                 </div>
                 <div class="noticia_content">
@@ -257,7 +296,7 @@
                     <div class="card_image">
                       <a href="/src/pages/details/gira2024.html"
                         ><img
-                          src="/src/assets/cat-Giras.jpg"
+                          src="/src/assets/imagenes/categorias/cat-Giras.jpg"
                           alt="Imagen del grupo tocando en concierto"
                           class="img_fluid"
                           width="800"
