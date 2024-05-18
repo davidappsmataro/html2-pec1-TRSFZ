@@ -21,8 +21,20 @@
     <include src="./src/components/header.html"></include>
     <div class="banner_fluid">
       <img
-        src="./assets/banner_presentacion.jpg"
+        src="./assets/imagenes/presentacion/banner_presentacion.jpg"
         alt="Imágen de los Rollings promocionando un disco."
+        srcset="
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=1200 1200w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=960 960w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=800 800w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=640 640w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=480 480w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=380 380w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=300 300w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=250 250w,
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=200 200w
+        "
+        sizes="(max-width: 1140px) 80vw, 1140px"
       />
     </div>
     <main class="presentacion">
@@ -81,7 +93,6 @@
               />
             </picture>
             <figcaption></figcaption>
-         
           </figure>
           <p>
             The Rolling Stones, más conocido en el mundo hispanohablante como

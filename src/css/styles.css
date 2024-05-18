@@ -1029,7 +1029,7 @@ footer p {
   margin-top: 5rem;
 }
 /****************************
-    CLASES
+    CLASES width="1000px" height="193.744px"
   *****************************/
 .full_width {
   width: 100%;
@@ -1047,13 +1047,13 @@ footer p {
   padding-bottom: 5rem;
 }
 
-
-
 .enlace {
   color: var(--cuaternary-color);
   cursor: pointer;
 }
-
+.object_fit_contain {
+  object-fit: contain !important;
+}
 .logo {
   width: 8rem;
   height: 8rem;
@@ -1073,10 +1073,14 @@ footer p {
 .banner_fluid {
   display: block;
   width: 100%;
-  padding-top: calc(var(--alto-header) + 1rem);
+  padding-top: var(--alto-header);
+  background-color: var(--bg-secondary-color);
+  
 }
 .banner_fluid img {
-  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100% ;
 }
 .bgeneral {
   background-color: var(--cuaternary-color);
@@ -1100,8 +1104,12 @@ footer p {
 div.contenedor_flotado {
   margin-top: 3rem;
 }
-.elemento_flotado_r, .elemento_flotado_l {
+.elemento_flotado_r,
+.elemento_flotado_l {
   margin-bottom: 1rem;
+}
+.thumbnail {
+  margin-top: 2rem;
 }
 
 .img_margin_vertical {
@@ -1172,7 +1180,7 @@ div.contenedor_flotado {
   .banner_fluid {
     padding-top: 0rem;
   }
-  
+
   /****************************
      PAGINA DETALLES GENERAL
 *****************************/
@@ -1248,13 +1256,10 @@ div.contenedor_flotado {
   .elemento_flotado_r {
     float: right;
     margin-left: 2rem;
-   
-    
   }
   .elemento_flotado_l {
     float: left;
     margin-right: 2rem;
-   
   }
 }
 /************************************************************************
@@ -1405,8 +1410,27 @@ div.contenedor_flotado {
   .grid-videos {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  
+}
+
+@media (min-width: 1200px) {
+  header.header ul.opciones_menu {
+    width: 60%;
+    justify-content: center;
+  }
+  header.header ul.opciones_menu > li {
+    margin: 1rem 0.9rem;
+  }
+  header.header ul.opciones_menu > li > a {
+    font-size: 1.5rem;
+  }
+  header.header ul.smedia_menu {
+    display: flex;
+    width: 15%;
+  }
+  header.header div.divlogo {
+    width: 25%;
+  }
+
   /****************************
      FOOTER
 *****************************/
@@ -1448,25 +1472,5 @@ div.contenedor_flotado {
   }
   footer.footer ul.legal {
     flex-direction: row;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.header ul.opciones_menu {
-    width: 60%;
-    justify-content: center;
-  }
-  header.header ul.opciones_menu > li {
-    margin: 1rem 0.9rem;
-  }
-  header.header ul.opciones_menu > li > a {
-    font-size: 1.5rem;
-  }
-  header.header ul.smedia_menu {
-    display: flex;
-    width: 15%;
-  }
-  header.header div.divlogo {
-    width: 25%;
   }
 }
