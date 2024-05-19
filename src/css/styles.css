@@ -291,10 +291,14 @@ div.flex-elements {
   }
 
   30% {
-    transform: rotate(360deg);
+    /* transform: rotate(360deg); */
+   transform: rotate3d(1, 2, 3, 10deg);
   }
   80% {
-    transform: scale(2);
+    /* transform: scale(2); */
+   /*  transform: rotate(360deg); */
+  /* transform: translate3d(12px, 50%, 3em); */
+  /* transform: skew(30deg, 20deg); */
   }
   90% {
     /* transform: translateY(calc((100% / 2 -200px))); */
@@ -302,7 +306,7 @@ div.flex-elements {
   }
   100% {
     /* transform: translateY(center); */
-    font-size: 10rem;
+    font-size: 8rem;
   }
 }
 @keyframes movimientofocos {
@@ -359,10 +363,14 @@ div.foco1 {
   top: -200;
   left: 0;
   z-index: 200;
+  
   /* right: 0; */
   animation: movimientofocos 5s infinite alternate ease both;
 
   animation-delay: 2s;
+}
+div.foco1 img {
+  width: 100%;
 }
 div.foco2 {
   /* margin-left: auto;
@@ -375,15 +383,30 @@ div.foco2 {
   animation: movimientofocos 4s infinite alternate ease both;
 }
 div.loader img {
-  width: 30%;
+  width: 40%;
   z-index: 300;
 }
+div.loader picture {
+  
+  z-index: 300;
+}
+div.loader picture img {
+  
+  margin: 0 auto;
+  width: 20rem;
+  height: 20rem;
+  
+}
+/* .svg {
+  width: 10rem;
+  height: 10rem;
+} */
 
 p.loader__logo1,
 p.loader__logo2 {
   font-family: var(--secondary-font);
   text-shadow: 5px 5px 5px black;
-  font-size: 5rem;
+  font-size: 2rem;
   line-height: 2rem;
   z-index: 300;
 }
@@ -391,7 +414,7 @@ p.loader__logo2 {
 p.loader__logo1 {
   margin-top: 5rem;
   animation: movimientotitulo 2s ease-in-out both;
-  z-index: 300;
+ 
 }
 p.loader__logo2 {
   margin-top: 5rem;
@@ -406,6 +429,8 @@ div.loader button {
   background-color: black;
   z-index: 300;
 }
+
+
 /****************************
      PAGINA INDEX
 *****************************/
@@ -432,10 +457,15 @@ main.index {
   width: 100vw;
   height: 20vh;
   
+  background-image: url('/src/assets/imagenes/portada/fondosC.png');
   /* background-color: red; */
-  background-image: url('/src/assets/imagenes/portada/fondos.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-image: image-set(
+    url('/src/assets/imagenes/portada/fondos.png')
+
+  ); */
+  background-repeat: repeat;
+  
+  
   /* margin: 0 auto; */
   
   /* left: 0;
@@ -1275,6 +1305,12 @@ div.contenedor_flotado {
   .newsletter form button {
     grid-column: 10/13;
   }
+  /****************************
+       SALA CONCIERTOS
+  *****************************/
+  /* p.loader__logo1 {
+    font-size: ;
+  } */
   /****************************
      FOOTER
 *****************************/

@@ -23,24 +23,76 @@
       <div class="escena__intro">
         <audio
           src="/src/assets/musica/The Rolling Stones - (I Can't Get No) Satisfaction (Official Lyric Video).mp3"
-         autoplay
+          autoplay
         >
           Your browser does not support the <code>audio</code> element.
         </audio>
         <div class="escena__intro__fondo"></div>
 
         <div class="escena__foco foco1">
-          <img class="img_fluid" src="/src/assets/foco.png" />
+          <picture>
+            <source
+              media="(min-width: 769px)"
+              srcset="/src/assets/imagenes/sala/foco.png"
+              type="image/png"
+            />
+            <source
+              media="(min-width: 481px)"
+              srcset="/src/assets/imagenes/sala/focoMedio.png"
+              type="image/png"
+            />
+            <source
+              media="(max-width: 480px)"
+              srcset="/src/assets/imagenes/sala/focoLargo.png"
+              type="image/png"
+            />
+            <img
+              class="img_fluid"
+              src="/src/assets/imagenes/sala/focoMedio.png"
+              alt="foco discoteca"
+            />
+          </picture>
         </div>
         <div class="escena__foco foco2">
-          <img class="img_fluid" src="/src/assets/foco.png" />
+          <picture>
+            <source
+              media="(min-width: 769px)"
+              srcset="/src/assets/imagenes/sala/foco.png"
+              type="image/png"
+            />
+            <source
+              media="(min-width: 481px)"
+              srcset="/src/assets/imagenes/sala/focoMedio.png"
+              type="image/png"
+            />
+            <source
+              media="(max-width: 480px)"
+              srcset="/src/assets/imagenes/sala/focoLargo.png"
+              type="image/png"
+            />
+            <img
+              class="img_fluid"
+              src="/src/assets/imagenes/sala/focoMedio.png"
+              alt="foco discoteca"
+            />
+          </picture>
         </div>
 
         <div class="loader">
-          <img src="/src/assets/imagenes/logos/logo.png" alt="Logo de The Rolling Stones" />
+          <picture>
+            <source
+              type="image/svg+xml"
+              srcset="/src/assets/imagenes/logos/logo_white.svg"
+            />
+            <img
+              class="svg"
+              src="/src/assets/imagenes/logos/logo.png"
+              alt="Logo de The Rolling Stones"
+            />
+          </picture>
+          <!--  <img src="/src/assets/imagenes/logos/logo.png" alt="Logo de The Rolling Stones" /> -->
           <p class="loader__logo1">The Rolling Stones</p>
           <p class="loader__logo2">Fan Zone</p>
-        
         </div>
       </div>
     </main>
