@@ -486,7 +486,7 @@ div.banner_row {
 }
 div.banner__img__container {
   /*  width: 50px; */
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -1029,7 +1029,7 @@ footer p {
   margin-top: 5rem;
 }
 /****************************
-    CLASES width="1000px" height="193.744px"
+    CLASES 
   *****************************/
 .full_width {
   width: 100%;
@@ -1151,6 +1151,12 @@ div.contenedor_flotado {
   }
   main:not(.index) {
     padding-top: 1rem;
+  }
+/****************************
+       PAGINA INDEX
+  *****************************/
+  div.banner__img__container {
+    display: flex;
   }
   /****************************
        PAGINA CATEGORIA
