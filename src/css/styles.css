@@ -466,6 +466,10 @@ main.index {
   width: 100vw;
   height: 20vh;
   background-image: url("/src/assets/imagenes/portada/fondosC.png");
+  background-image: -webkit-image-set(
+    url("/src/assets/imagenes/portada/fondosC.webp")
+  );
+  background-image: image-set(url("/src/assets/imagenes/portada/fondosC.webp"));
   background-repeat: repeat;
 }
 .clip_container img {
@@ -836,6 +840,46 @@ span.name_web_presentacion {
   text-decoration: underline;
   color: var(--cuaternary-color);
   font-size: 3.5rem;
+}
+div.logo_svg .dientes {
+  /*   animation: movimientoRolling 2s infinite alternate ease-in-out both; */
+  fill: white;
+}
+div.logo_svg .lengua {
+  fill: #ea4949;
+  animation: movimientoLengua 8s infinite normal ease-out both;
+}
+div.logo_svg .fondo_boca {
+  fill: white;
+  stroke: var(--cuaternary-color);
+  stroke-width: 2rem;
+}
+div.logo_svg svg {
+  width: 18rem;
+  height: 18rem;
+  display: block;
+  margin: 0 auto;
+}
+
+div.logo_svg {
+  width: 100%;
+  /* background-color: orange; */
+  margin-bottom: 2rem;
+}
+@keyframes movimientoLengua {
+  30% {
+    fill: blue;
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    fill: green;
+  }
+  90% {
+    fill: orange;
+  }
 }
 /****************************
      PAGINA NOTICIA
@@ -1504,7 +1548,6 @@ div.contenedor_flotado {
   header.header div.divlogo {
     width: 25%;
   }
-
 }
 @media (min-width: 1400px) {
   /****************************
