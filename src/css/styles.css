@@ -978,6 +978,7 @@ div.newsletter h2 {
 }
 form ul {
   list-style: none;
+  width: 100%;
 }
 form ul li {
   margin-bottom: 1rem;
@@ -994,7 +995,9 @@ input[type="email"] {
   width: 100%;
 }
 form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 form ul {
   display: grid;
@@ -1003,11 +1006,12 @@ form input {
   margin-top: 0.5rem;
 }
 form button.bgeneral {
-  width: 40%;
+  width: 30%;
   height: 4.3rem;
   min-width: 13rem;
   border-radius: 0;
-  justify-self: end;
+  margin-top: 0.5rem;
+ 
 }
 
 span.error {
@@ -1278,28 +1282,29 @@ div.contenedor_flotado {
      NEWSLETTER
 *****************************/
 
-  .newsletter form {
+  /* .newsletter form {
     grid-template-columns: repeat(12, 1fr);
     align-content: center;
     gap: 1rem;
-  }
+  } */
   .newsletter ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+   
   }
   .newsletter ul input {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .newsletter form button.bgeneral {
-    width: 100%;
-  }
-  .newsletter form ul {
+  /* .newsletter form button.bgeneral {
+    width: 40%;
+  } */
+  /* .newsletter form ul {
     grid-column: 1/10;
-  }
-  .newsletter form button {
+  } */
+  /* .newsletter form button {
     grid-column: 10/13;
-  }
+  } */
   /****************************
        SALA CONCIERTOS
   *****************************/
