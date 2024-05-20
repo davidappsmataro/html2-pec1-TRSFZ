@@ -50,7 +50,7 @@ a {
 .detalle a,
 main.enlaces a {
   color: var(--cuaternary-color);
-  transition: all 500ms ease;
+  transition: color 0.5s ease-in;
 }
 .detalle a:hover,
 main.enlaces a:hover {
@@ -145,7 +145,7 @@ header.header ul.smedia_menu {
   display: none;
 }
 header.header ul.smedia_menu li > a {
-  transition: all 200ms ease-out;
+  transition: color 0.5s ease-in;
 }
 header.header ul.smedia_menu li > a:hover {
   color: var(--cuaternary-color);
@@ -289,24 +289,11 @@ div.flex-elements {
     text-align: center;
     font-size: 3rem;
   }
-
   30% {
-    /* transform: rotate(360deg); */
-   transform: rotate3d(1, 2, 3, 10deg);
-  }
-  80% {
-    /* transform: scale(2); */
-   /*  transform: rotate(360deg); */
-  /* transform: translate3d(12px, 50%, 3em); */
-  /* transform: skew(30deg, 20deg); */
-  }
-  90% {
-    /* transform: translateY(calc((100% / 2 -200px))); */
-    /* font-size: 3rem; */
+    transform: rotate3d(1, 2, 3, 10deg);
   }
   100% {
-    /* transform: translateY(center); */
-    font-size: 8rem;
+    font-size: 5rem;
   }
 }
 @keyframes movimientofocos {
@@ -317,33 +304,75 @@ div.flex-elements {
     transform: rotate(-40deg);
   }
 }
+@keyframes movimientologo {
+  0% {
+    transform: rotate(30deg);
+    border-radius: 20rem;
+  }
+  50% {
+    transform: rotate(-40deg);
+  }
+  60% {
+    background-color: blue;
+    border-radius: 10rem;
+    transform: translateY(-40px);
+  }
+  70% {
+    background-color: green;
+    border-radius: 5rem;
+    padding: 5rem;
+    transform: rotate(360deg);
+  }
+  80% {
+    background-color: pink;
+    border-radius: 5rem;
+  }
+  90% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    background-color: red;
+    border-radius: 20rem;
+    transform: skew(30deg, 20deg);
+  }
+}
+
 main.sala__conciertos {
   background-color: var(--quinary-color);
 }
 div.portada {
   position: relative;
-  /*  display: block; */
 }
 div.loader {
   width: 100vw;
   height: 100vh;
-  /* background-color: black; */
   color: white;
-  display: flex;
+  display: none;
   flex-direction: column;
-  /* justify-content: center; */
   margin-top: 10rem;
   align-items: center;
-  /* position: relative; */
-  /* position: absolute;
-  top: 0;
-  z-index: 99; */
+}
+@media (min-width: 350px) {
+  div.loader {
+    display: flex;
+  }
 }
 div.escena__intro {
   position: relative;
   overflow: hidden;
-  background-image: url("../assets/concert-3387324_1920.jpg");
+  background-image: url("/src/assets/imagenes/sala/concert-3387324_960.jpg");
+  background-image: -webkit-image-set(
+    url("/src/assets/imagenes/sala/concert-3387324_960.webp") 1x,
+    url("/src/assets/imagenes/sala/concert-3387324_1920.webp") 2x
+  );
+  background-image: image-set(
+    url("/src/assets/imagenes/sala/concert-3387324_960.webp") 1x,
+    url("/src/assets/imagenes/sala/concert-3387324_1920.webp") 2x
+  );
+  background-size: cover;
   background-color: black;
+  width: 100vw;
+  height: 100vh;
 }
 div.escena__foco {
   position: absolute;
@@ -356,30 +385,20 @@ div.escena__intro__fondo {
   z-index: 99;
   position: absolute;
 }
-
 div.foco1 {
-  /*  margin-left: auto;
-  margin-right: auto; */
   top: -200;
   left: 0;
   z-index: 200;
-  
-  /* right: 0; */
   animation: movimientofocos 5s infinite alternate ease both;
-
   animation-delay: 2s;
 }
 div.foco1 img {
   width: 100%;
 }
 div.foco2 {
-  /* margin-left: auto;
-  margin-right: auto; */
   top: -200;
   right: 0;
   z-index: 200;
-  /*  left: 0; */
-
   animation: movimientofocos 4s infinite alternate ease both;
 }
 div.loader img {
@@ -387,21 +406,14 @@ div.loader img {
   z-index: 300;
 }
 div.loader picture {
-  
   z-index: 300;
 }
 div.loader picture img {
-  
   margin: 0 auto;
   width: 20rem;
   height: 20rem;
-  
+  animation: movimientologo 5s infinite alternate ease-in-out both;
 }
-/* .svg {
-  width: 10rem;
-  height: 10rem;
-} */
-
 p.loader__logo1,
 p.loader__logo2 {
   font-family: var(--secondary-font);
@@ -414,14 +426,12 @@ p.loader__logo2 {
 p.loader__logo1 {
   margin-top: 5rem;
   animation: movimientotitulo 2s ease-in-out both;
- 
 }
 p.loader__logo2 {
-  margin-top: 5rem;
+  margin-top: 2rem;
   color: var(--cuaternary-color);
-  font-size: 8rem;
+  font-size: 4rem;
 }
-
 div.loader button {
   width: 30%;
   margin-top: 5rem;
@@ -429,7 +439,6 @@ div.loader button {
   background-color: black;
   z-index: 300;
 }
-
 
 /****************************
      PAGINA INDEX
@@ -456,37 +465,16 @@ main.index {
   right: 0;
   width: 100vw;
   height: 20vh;
-  
-  background-image: url('/src/assets/imagenes/portada/fondosC.png');
-  /* background-color: red; */
-  /* background-image: image-set(
-    url('/src/assets/imagenes/portada/fondos.png')
-
-  ); */
+  background-image: url("/src/assets/imagenes/portada/fondosC.png");
   background-repeat: repeat;
-  
-  
-  /* margin: 0 auto; */
-  
-  /* left: 0;
-  display: none; */
-  /* margin-left: auto;
-  margin-right: auto; */
 }
 .clip_container img {
- /*  position: absolute;
-  right: 0;
-  left: 0; */
   position: absolute;
   right: 0;
   left: 0;
   margin-left: auto;
   margin-right: auto;
   bottom: -2rem;
-  /* max-height: 200%; */
-   /* width: 100px; */
-  
-  /* margin: 0 auto; */
   clip-path: polygon(
     81.53% 0.19%,
     27.74% 3.77%,
@@ -498,7 +486,6 @@ main.index {
     71.94% 54.15%,
     101.1% 38.85%
   );
-  
 }
 @media (min-width: 768px) {
   .clip_container img {
@@ -510,45 +497,7 @@ main.index {
     right: 600;
   }
 }
-/* .clip video {
- 
- 
-  clip-path: polygon(
-    81.53% 0.19%,
-    27.74% 3.77%,
-    2.35% 20.51%,
-    -0.2% 34.57%,
-    17.35% 52.49%,
-    22.82% 98.22%,
-    73.39% 98.84%,
-    71.94% 54.15%,
-    101.1% 38.85%
-  );
-  
-} */
-/* @media (min-width: 300px) {
-  .clip {
-    display: block;
-  }
-  .clip video {
-    width: 90%;
-  }
-} */
-/* @media (min-width: 500px) {
-  .clip img {
-    width: 60%;
-  }
-} */
-/* @media (min-width: 768px) {
-  .clip {
-    display: none;
-  }
-} */
-/* @media (min-width: 1200px) {
-  .clip video {
-    width: 35%;
-  }
-} */
+
 .banner {
   background-color: var(--secondary-color-alpha);
   height: 20rem;
@@ -770,7 +719,7 @@ section.lista_categorias ul > li {
   padding: 0.3rem 0.8rem;
   background-color: var(--primary-color);
   border-radius: 1rem;
-  transition: all 200ms ease;
+  transition: background-color 0.5s ease-in;
 }
 section.lista_categorias ul > li:hover {
   background-color: var(--bg-secondary-color);
@@ -789,7 +738,7 @@ main.categoria h1 + ul > li {
   padding: 0.3rem 1rem;
 
   border-radius: 1rem;
-  transition: all 500ms ease;
+  transition: border 0.5s ease-out;
 }
 main.categoria h1 + ul > li:hover {
   border: 3px solid var(--primary-color);
@@ -920,7 +869,9 @@ ul.paginacion li a:not(.flecha_l, .flecha_r) {
   display: inline-block;
   margin-right: 1rem;
   padding: 0.8rem 0.7rem;
-  transition: all 200ms ease;
+  transition-property: background-color, border, color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
 }
 ul.paginacion .flecha_l {
   margin-right: 2rem;
@@ -1045,7 +996,7 @@ footer.footer ul li a {
 }
 footer.footer ul li a:hover {
   color: var(--cuaternary-color);
-  transition: color 200ms ease-out;
+  transition: color 0.5s ease-out;
 }
 footer ul {
   list-style: none;
@@ -1156,7 +1107,7 @@ footer p {
   display: inline-block;
   text-align: center;
   cursor: pointer;
-  transition: all 500ms ease;
+  transition: background-color 0.5s ease-out;
 }
 .bgeneral .fa-chevron-right {
   margin-left: 2rem;
@@ -1308,9 +1259,29 @@ div.contenedor_flotado {
   /****************************
        SALA CONCIERTOS
   *****************************/
-  /* p.loader__logo1 {
-    font-size: ;
-  } */
+  @keyframes movimientotitulo {
+    0% {
+      transform: translateY(-500px);
+      text-align: center;
+      font-size: 3rem;
+    }
+    30% {
+      transform: rotate3d(1, 2, 3, 10deg);
+    }
+    80% {
+      transform: scale(2);
+    }
+    100% {
+      font-size: 8rem;
+    }
+  }
+  p.loader__logo2 {
+    margin-top: 4rem;
+    font-size: 6rem;
+  }
+  p.loader__logo1 {
+    margin-top: 10rem;
+  }
   /****************************
      FOOTER
 *****************************/
@@ -1387,7 +1358,7 @@ div.contenedor_flotado {
     padding: 1rem 0rem;
     font-size: 1.4rem;
     font-weight: 400;
-    transition: all 500ms ease-out;
+    transition: color 0.5s ease-out;
   }
   header.header ul.opciones_menu > li > a:hover {
     color: var(--cuaternary-color);
@@ -1481,6 +1452,33 @@ div.contenedor_flotado {
     grid-template-columns: repeat(3, 1fr);
   }
   /****************************
+       SALA CONCIERTOS
+  *****************************/
+  @keyframes movimientotitulo {
+    0% {
+      transform: translateY(-500px);
+      text-align: center;
+      font-size: 3rem;
+    }
+    30% {
+      transform: rotate3d(1, 2, 3, 10deg);
+    }
+    80% {
+      transform: scale(2);
+    }
+    100% {
+      font-size: 10rem;
+    }
+  }
+  p.loader__logo2 {
+    margin-top: 6rem;
+    font-size: 8rem;
+  }
+  div.loader picture img {
+    width: 30rem;
+    height: 30rem;
+  }
+  /****************************
       clases
   *****************************/
   .grid-videos {
@@ -1507,6 +1505,8 @@ div.contenedor_flotado {
     width: 25%;
   }
 
+}
+@media (min-width: 1400px) {
   /****************************
      FOOTER
 *****************************/
