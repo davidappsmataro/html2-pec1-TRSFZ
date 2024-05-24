@@ -491,6 +491,7 @@ main.index {
     101.1% 38.85%
   );
 }
+
 @media (min-width: 768px) {
   .clip_container img {
     right: 350;
@@ -521,6 +522,15 @@ main.index {
 .banner_bottom {
   bottom: 15rem;
 }
+
+/* @media (max-width: 992px) and (min-height: 600px) and (orientation: landscape) { */
+@media (max-height: 600px) and (orientation: landscape)  {
+  .clip_container {
+    display: none;
+  }
+  
+}
+
 .clip_bottom {
   bottom: -2rem;
 }
