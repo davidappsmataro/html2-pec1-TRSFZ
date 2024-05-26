@@ -389,7 +389,7 @@ div.foco1 {
   top: -200;
   left: 0;
   z-index: 200;
-  animation: movimientofocos 5s infinite alternate ease both;
+  animation: movimientofocos 5s infinite alternate ease backwards;
   animation-delay: 2s;
 }
 div.foco1 img {
@@ -399,7 +399,7 @@ div.foco2 {
   top: -200;
   right: 0;
   z-index: 200;
-  animation: movimientofocos 4s infinite alternate ease both;
+  animation: movimientofocos 4s infinite alternate ease backwards;
 }
 div.loader img {
   width: 40%;
@@ -425,7 +425,7 @@ p.loader__logo2 {
 
 p.loader__logo1 {
   margin-top: 5rem;
-  animation: movimientotitulo 2s ease-in-out both;
+  animation: movimientotitulo 3s ease-in-out both;
 }
 p.loader__logo2 {
   margin-top: 2rem;
@@ -522,13 +522,10 @@ main.index {
 .banner_bottom {
   bottom: 15rem;
 }
-
-/* @media (max-width: 992px) and (min-height: 600px) and (orientation: landscape) { */
-@media (max-height: 600px) and (orientation: landscape)  {
+@media (max-height: 600px) and (orientation: landscape) {
   .clip_container {
     display: none;
   }
-  
 }
 
 .clip_bottom {
@@ -575,30 +572,22 @@ div.banner_row {
   height: 100%;
 }
 div.banner__img__container {
-  /*  width: 50px; */
   display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 120%;
   margin-left: 30px;
-  /* margin-right: 3rem; */
-  /* background-color: var(--quinary-color); */
-  /* border-radius: 3rem; */
   overflow: hidden;
-  /* border: 2px solid var(--cuaternary-color); */
   font-family: var(--secondary-font);
   color: var(--primary-color);
   font-size: 15rem;
 }
 
 img.clip_image {
-  /* clip-path: polygon(35% 24%, 24% 28%, 17% 34%, 11% 39%, 7% 43%, 3% 51%, 1% 55%, 1% 59%, 1% 65%, 1% 71%, 1% 77%, 1% 81%, 1% 86%, 3% 90%, 7% 94%, 17% 94%, 24% 93%, 29% 90%, 33% 88%, 40% 89%, 47% 89%, 53% 87%, 55% 83%, 58% 79%, 63% 77%, 67% 75%, 71% 77%, 79% 78%, 84% 77%, 88% 78%, 95% 77%, 99% 76%, 100% 64%, 85% 62%, 83% 63%, 76% 60%, 75% 52%, 75% 43%, 74% 36%, 73% 32%, 69% 29%, 62% 27%, 59% 25%, 63% 21%, 64% 15%, 63% 11%, 59% 4%, 54% 1%, 48% 0%, 41% 1%, 37% 3%, 34% 9%, 34% 17%, 36% 20%); */
   clip-path: circle(61.2% at 79% 39%);
   width: 100%;
   border-right: 5px solid var(--cuaternary-color);
-  /* border-top: 2px solid var(--cuaternary-color);
-  border-bottom: 2px solid var(--cuaternary-color); */
 }
 
 main:not(.index) {
@@ -1021,7 +1010,6 @@ form button.bgeneral {
   min-width: 13rem;
   border-radius: 0;
   margin-top: 0.5rem;
- 
 }
 
 span.error {
@@ -1052,7 +1040,8 @@ footer.footer ul.smedia_menu_footer li {
 footer.footer ul li a {
   color: var(--primary-color);
 }
-footer.footer ul li a:hover {
+footer.footer ul li a:hover,
+footer.footer ul li a:active {
   color: var(--cuaternary-color);
   transition: color 0.5s ease-out;
 }
@@ -1140,10 +1129,7 @@ footer p {
 .clear_fix {
   clear: both;
 }
-/* .splide__slide img {
-  object-fit: none;
-  
-} */
+
 .banner_fluid {
   display: block;
   width: 100%;
@@ -1300,21 +1286,12 @@ div.contenedor_flotado {
   .newsletter ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-   
   }
   .newsletter ul input {
     margin-top: 0;
     margin-bottom: 0;
   }
-  /* .newsletter form button.bgeneral {
-    width: 40%;
-  } */
-  /* .newsletter form ul {
-    grid-column: 1/10;
-  } */
-  /* .newsletter form button {
-    grid-column: 10/13;
-  } */
+
   /****************************
        SALA CONCIERTOS
   *****************************/
