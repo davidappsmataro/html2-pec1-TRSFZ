@@ -793,11 +793,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-caption {
-  font-size: 1.6rem;
-  font-weight: 700;
-  padding: 15px;
-}
+
 td,
 th {
   padding: 0.5rem;
