@@ -1274,11 +1274,6 @@ div.contenedor_flotado {
      NEWSLETTER
 *****************************/
 
-  /* .newsletter form {
-    grid-template-columns: repeat(12, 1fr);
-    align-content: center;
-    gap: 1rem;
-  } */
   .newsletter ul {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
