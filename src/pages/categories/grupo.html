@@ -16,6 +16,8 @@
       href="/src/assets/imagenes/favicon/favicon3.png"
     />
     <link rel="stylesheet" href="/src/css/styles.css" />
+    <include src="./src/components/scripts.html"></include>
+    <script type="module" src="/src/js/newsletter.js"></script>
   </head>
   <body>
     <include src="./src/components/header.html"></include>
@@ -41,6 +43,8 @@
                   "
                   sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
                   type="image/webp"
+                  width="800"
+                  height="600"
                 />
                 <img
                   class="img_fluid borde_grueso_imagen"
@@ -56,6 +60,8 @@
                   "
                   sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
                   alt="Imagen del grupo tocando"
+                  width="800"
+                  height="600"
                 />
               </picture>
 
@@ -72,28 +78,31 @@
             <div class="intro">
               <p>
                 De los miembros originales de la banda, hasta la fecha solo se
-                mantiene la asociación formada por <strong>Mick Jagger</strong> y
-                <strong>Keith Richards</strong>, que continúan siendo la formación más
-                longeva en la historia del rock.
+                mantiene la asociación formada por
+                <strong>Mick Jagger</strong> y <strong>Keith Richards</strong>,
+                que continúan siendo la formación más longeva en la historia del
+                rock.
               </p>
 
               <p>
-                El pianista <strong>Ian Stewart</strong> dejó de ser «miembro oficial» de
-                la banda en 1963, por decisión de <strong>Andrew Loog Oldham</strong>,
-                mánager y productor del grupo por entonces. Sin embargo, siguió
-                tocando con el grupo hasta su muerte en 1985. El
-                multi-instrumentista y primer líder <strong>Brian Jones</strong> fue
-                expulsado de la banda en junio de 1969 por su adicción a las
-                drogas (y moriría un mes más tarde), y fue reemplazado por
-                <strong>Mick Taylor</strong>, aunque este último dejaría la banda a
-                mediados de la década de los 70s. A su vez, Taylor fue relevado
-                por <strong>Ronnie Wood</strong> en 1976. <strong>Bill Wyman</strong> decidió dejar
-                la banda en 1993 y no fue reemplazado oficialmente. En agosto de
-                2021, falleció <strong>Charlie Watts</strong> a la edad de 80 años, apenas
+                El pianista <strong>Ian Stewart</strong> dejó de ser «miembro
+                oficial» de la banda en 1963, por decisión de
+                <strong>Andrew Loog Oldham</strong>, mánager y productor del
+                grupo por entonces. Sin embargo, siguió tocando con el grupo
+                hasta su muerte en 1985. El multi-instrumentista y primer líder
+                <strong>Brian Jones</strong> fue expulsado de la banda en junio
+                de 1969 por su adicción a las drogas (y moriría un mes más
+                tarde), y fue reemplazado por <strong>Mick Taylor</strong>,
+                aunque este último dejaría la banda a mediados de la década de
+                los 70s. A su vez, Taylor fue relevado por
+                <strong>Ronnie Wood</strong> en 1976.
+                <strong>Bill Wyman</strong> decidió dejar la banda en 1993 y no
+                fue reemplazado oficialmente. En agosto de 2021, falleció
+                <strong>Charlie Watts</strong> a la edad de 80 años, apenas
                 semanas después de dejar en duda su participación en la gira
                 programada para ese año por problemas de salud. En dicha gira,
-                es sustituido a las baquetas por <strong>Steve Jordan</strong>, nuevo
-                batería de la banda.
+                es sustituido a las baquetas por <strong>Steve Jordan</strong>,
+                nuevo batería de la banda.
               </p>
             </div>
             <h2>COMPONENTES</h2>
@@ -117,10 +126,13 @@
                         "
                         sizes="120px"
                         type="image/webp"
+                        width="120"
+                        height="137.10"
                       />
+
                       <img
                         class="img_fluid borde_grueso_imagen"
-                        src="/src/assets/imagenes/detalle/Mick_JaggerB.jpg?width=800"
+                        src="/src/assets/imagenes/detalle/Mick_JaggerC.jpg?width=800"
                         srcset="
                           /src/assets/imagenes/detalle/Mick_JaggerC.jpg?width=960 960w,
                           /src/assets/imagenes/detalle/Mick_JaggerC.jpg?width=800 800w,
@@ -131,8 +143,11 @@
                           /src/assets/imagenes/detalle/Mick_JaggerC.jpg?width=250 250w,
                           /src/assets/imagenes/detalle/Mick_JaggerC.jpg?width=200 200w
                         "
-                        sizes="80vw"
+                        sizes="120px"
                         alt="Imagen de Mick Jagger en concierto"
+                        loading="lazy"
+                        width="120"
+                        height="137.10"
                       />
                     </picture>
                   </a>
@@ -266,6 +281,8 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             type="image/webp"
+                            width="640"
+                            height="480"
                           />
 
                           <img
@@ -282,6 +299,9 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             alt="Foto en blanco y negro del grupo en la pista del aeropueto con mucha gente"
+                            loading="lazy"
+                            width="640"
+                            height="480"
                           /> </picture
                       ></a>
                     </div>
@@ -312,6 +332,8 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             type="image/webp"
+                            width="640"
+                            height="480"
                           />
 
                           <img
@@ -328,6 +350,9 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             alt="Portada del disco Sticky Fingers donde aparece unos tejanos y el logo de los Rolling"
+                            loading="lazy"
+                            width="640"
+                            height="480"
                           /> </picture
                       ></a>
                     </div>
@@ -358,6 +383,8 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             type="image/webp"
+                            width="640"
+                            height="480"
                           />
 
                           <img
@@ -374,6 +401,9 @@
                             "
                             sizes="(max-width: 768px) calc(80vw - 30px), (max-width: 992px) calc((80vw / 2) - 30px - 10px), (max-width: 1425px) calc(((80vw / 12) * 4) - 30px - 10px), 337px"
                             alt="Imagen de un concierto en un estadio."
+                            loading="lazy"
+                            width="640"
+                            height="480"
                           /> </picture
                       ></a>
                     </div>
@@ -404,7 +434,5 @@
       <include src="./src/components/newsletter.html"></include>
     </main>
     <include src="./src/components/footer.html"></include>
-    <include src="./src/components/scripts.html"></include>
-    <script type="module" src="/src/js/newsletter.js"></script>
   </body>
 </html>
