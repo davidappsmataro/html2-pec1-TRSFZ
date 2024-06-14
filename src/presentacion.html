@@ -43,7 +43,6 @@
       <div class="container">
         <h1>Presentación</h1>
         <section>
-          
           <div class="logo_svg">
             <svg
               height="100px"
@@ -142,6 +141,22 @@
                 type="image/webp"
               />
               <source
+                media="(min-width: 769px)"
+                srcset="
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=1200 1200w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=960   960w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg             800w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=640   640w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=480   480w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=380   380w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=300   300w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=250   250w,
+                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=200   200w
+                "
+                sizes="(min-width: 1426px) 570px, (min-width: 769px) calc(80vw / 2)"
+                type="image/jpeg"
+              />
+              <source
                 srcset="
                   ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp           640w,
                   ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?as=webp&width=480 480w,
@@ -153,21 +168,24 @@
                 sizes="calc(80vw - 6px)"
                 type="image/webp"
               />
+              <source
+                srcset="
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg           640w,
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?width=480 480w,
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?width=380 380w,
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?width=300 300w,
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?width=250 250w,
+                  ./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64_640B.jpg?width=200 200w
+                "
+                sizes="calc(80vw - 6px)"
+                type="image/jpeg"
+              />
               <img
                 class="img_fluid"
                 src="./assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=800"
                 alt="Imagen de Mick Jagger en concierto"
-                srcset="
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=960 960w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?          800w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=640 640w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=480 480w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=380 380w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=300 300w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=250 250w,
-                  /src/assets/imagenes/presentacion/Rolling_Stones_Desert_Trip_2016-64.jpg?width=200 200w
-                "
-                sizes="(min-width: 1426px) 570px, (min-width: 769px) calc(80vw / 2)"
+                width="640"
+                height="361"
               />
             </picture>
 
@@ -184,12 +202,13 @@
             The Rolling Stones, más conocido en el mundo hispanohablante como
             los Rolling Stones, es un grupo británico de
             <span lang="en">rock</span> originario de Londres. Fue formado en
-            abril de 1962 por <strong>Brian Jones</strong>, <strong>Mick Jagger</strong>,
-            <strong>Keith Richards</strong> e <strong>Ian Stewart</strong>, junto a varios bajistas
-            y bateristas que nunca permanecieron fijos en la formación hasta la
-            llegada de <strong>Bill Wyman</strong> y <strong>Charlie Watts</strong>, unos meses
-            después, quienes completarían la primera formación oficial de la
-            banda.
+            abril de 1962 por <strong>Brian Jones</strong>,
+            <strong>Mick Jagger</strong>, <strong>Keith Richards</strong> e
+            <strong>Ian Stewart</strong>, junto a varios bajistas y bateristas
+            que nunca permanecieron fijos en la formación hasta la llegada de
+            <strong>Bill Wyman</strong> y <strong>Charlie Watts</strong>, unos
+            meses después, quienes completarían la primera formación oficial de
+            la banda.
           </p>
 
           <p>
@@ -208,9 +227,10 @@
             (1971) y quizá su mejor obra,
             <span lang="en" class="titulos_musicales">Exile on Main St.</span>
             (1972). En 1989 fueron incluidos en el
-            <strong>Salón de la Fama del Rock and Roll</strong>, y en 2004 la revista
-            estadounidense <strong>Rolling Stone</strong> los colocó en el puesto n.º 4 en
-            su lista de Los 50 mejores artistas de todos los tiempos.
+            <strong>Salón de la Fama del Rock and Roll</strong>, y en 2004 la
+            revista estadounidense <strong>Rolling Stone</strong> los colocó en
+            el puesto n.º 4 en su lista de Los 50 mejores artistas de todos los
+            tiempos.
           </p>
           <div class="clearfix"></div>
           <p>
@@ -251,6 +271,5 @@
       <include src="./src/components/newsletter.html"></include>
     </main>
     <include src="./src/components/footer.html"></include>
-   
   </body>
 </html>

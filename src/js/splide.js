@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       height: "100vh",
       type: "loop",
       autoplay: "play",
+     /*  lazyLoad: 'nearby' */
     }).mount();
   }
 });
