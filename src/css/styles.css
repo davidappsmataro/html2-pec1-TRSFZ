@@ -1092,7 +1092,11 @@ footer p {
   *****************************/
 .audio {
   z-index: 900;
-  margin-top: 3rem;
+  
+}
+.info_audio {
+  z-index: 900;
+  margin-top: 4rem;
 }
 .full_width {
   width: 100%;
