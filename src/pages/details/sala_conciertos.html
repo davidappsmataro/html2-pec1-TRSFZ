@@ -23,12 +23,6 @@
     <include src="./src/components/header.html"></include>
     <main class="sala__conciertos">
       <div class="escena__intro">
-        <audio
-          src="/src/assets/musica/The Rolling Stones - (I Can't Get No) Satisfaction (Official Lyric Video).mp3"
-          autoplay
-        >
-          Your browser does not support the <code>audio</code> element.
-        </audio>
         <div class="escena__intro__fondo"></div>
 
         <div class="escena__foco foco1">
@@ -92,13 +86,20 @@
               alt="Logo de The Rolling Stones"
             />
           </picture>
-          
+
           <p class="loader__logo1">The Rolling Stones</p>
           <p class="loader__logo2">Fan Zone</p>
+          <audio
+            class="audio"
+            src="/src/assets/musica/The Rolling Stones - (I Can't Get No) Satisfaction (Official Lyric Video).mp3"
+            autoplay
+            
+          >
+            Your browser does not support the <code>audio</code> element.
+          </audio>
         </div>
       </div>
     </main>
     <include src="./src/components/footer.html"></include>
-    
   </body>
 </html>

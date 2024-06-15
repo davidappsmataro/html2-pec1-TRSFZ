@@ -1090,6 +1090,10 @@ footer p {
 /****************************
     CLASES 
   *****************************/
+.audio {
+  z-index: 900;
+  margin-top: 3rem;
+}
 .full_width {
   width: 100%;
 }
@@ -1330,6 +1334,7 @@ div.contenedor_flotado {
   .elemento_flotado_r {
     float: right;
     margin-left: 2rem;
+    width: 50%;
   }
   .elemento_flotado_l {
     float: left;
