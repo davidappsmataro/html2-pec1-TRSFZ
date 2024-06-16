@@ -16,8 +16,11 @@
       href="assets/imagenes/favicon/favicon3.png"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/lite-yt-embed.css" />
     <include src="./src/components/scripts.html"></include>
     <script type="module" src="js/newsletter.js"></script>
+    <script src="./js/lite-yt-embed.js" async></script>
+    <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script> -->
   </head>
   <body>
     <include src="./src/components/header.html"></include>
@@ -242,7 +245,30 @@
             apareció una colección de sellos conmemorativos del 60.º aniversario
             de la fundación del grupo.
           </p>
+          <!-- <div class="grid-videos">
+            
+            <lite-youtube videoid="MHlxGg0QIqE" videotitle="Out of Control" >
+              <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=MHlxGg0QIqE"><img src="./assets/imagenes/presentacion/outofcontrol.jpg" width="560" height="315"></a>
+            </lite-youtube>
+            <lite-youtube videoid="SGyOaCXr8Lw">
+              <a class="lite-youtube-fallback" href="https://www.youtube.com/watch?v=SGyOaCXr8Lw">Watch on YouTube: "Sample output of devtools-to-video cli tool"</a>
+            </lite-youtube>
+          </div> -->
           <div class="grid-videos">
+            
+            <lite-youtube videoid="MHlxGg0QIqE" style="background-image: url('./assets/imagenes/presentacion/outofcontrol.webp');">
+              <a href="https://youtube.com/watch?v=MHlxGg0QIqE" class="lty-playbtn" title="Play Video">
+                <span class="lyt-visually-hidden">Out of Control</span>
+              </a>
+            </lite-youtube>
+            <lite-youtube videoid="SGyOaCXr8Lw" style="background-image: url('./assets/imagenes/presentacion/startmeup.jpeg');">
+              <a href="https://youtube.com/watch?v=SGyOaCXr8Lw" class="lty-playbtn" title="Play Video">
+                <span class="lyt-visually-hidden">Out of Control</span>
+              </a>
+            </lite-youtube>
+           
+          </div>
+          <!-- <div class="grid-videos">
             <iframe
               width="560"
               height="315"
@@ -265,7 +291,7 @@
               class="youtube"
               loading="lazy"
             ></iframe>
-          </div>
+          </div> -->
         </div>
       </div>
       <include src="./src/components/newsletter.html"></include>

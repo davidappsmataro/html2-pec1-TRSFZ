@@ -1328,6 +1328,8 @@ div.contenedor_flotado {
 .borde_grueso_imagen {
   border: 15px solid var(--primary-color);
 }
+
+
 @media (min-width: 530px) {
   /****************************
      PAGINA ENLACES
