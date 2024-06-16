@@ -11,7 +11,7 @@
        url('/src/assets/fonts/inspiration/inspiration-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: swap;
 }
 @font-face {
   font-family: 'Roboto';
@@ -19,6 +19,7 @@
        url('/src/assets/fonts/roboto/roboto-black-webfont.woff') format('woff');
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -28,6 +29,7 @@
        url('/src/assets/fonts/roboto/roboto-blackitalic-webfont.woff') format('woff');
   font-weight: 900;
   font-style: italic;
+  font-display: swap;
 
 }
 
@@ -37,6 +39,7 @@
        url('/src/assets/fonts/roboto/roboto-bold-webfont.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -46,6 +49,7 @@
        url('/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff') format('woff');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 
 }
 
@@ -55,6 +59,7 @@
        url('/src/assets/fonts/roboto/roboto-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
 
 }
 
@@ -64,6 +69,7 @@
        url('/src/assets/fonts/roboto/roboto-light-webfont.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -74,6 +80,7 @@
        url('/src/assets/fonts/roboto/roboto-lightitalic-webfont.woff') format('woff');
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 
 }
 
@@ -83,6 +90,7 @@
        url('/src/assets/fonts/roboto/roboto-medium-webfont.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -92,6 +100,7 @@
        url('/src/assets/fonts/roboto/roboto-mediumitalic-webfont.woff') format('woff');
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 
 }
 
@@ -101,6 +110,7 @@
        url('/src/assets/fonts/roboto/roboto-regular-webfont.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -110,6 +120,7 @@
        url('/src/assets/fonts/roboto/roboto-thin-webfont.woff') format('woff');
   font-weight: 100;
   font-style: normal;
+  font-display: swap;
 
 }
 
@@ -119,6 +130,7 @@
        url('/src/assets/fonts/roboto/roboto-thinitalic-webfont.woff') format('woff');
   font-weight: 100;
   font-style: italic;
+  font-display: swap;
 
 }
 
