@@ -26,6 +26,7 @@
     <include src="./src/components/header.html"></include>
     <div class="banner_fluid">
       <img
+        class="img_fluid"
         src="./assets/imagenes/presentacion/banner_presentacion.jpg"
         alt="Imagen de los Rollings promocionando un disco."
         srcset="
@@ -33,13 +34,12 @@
           /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=960   960w,
           /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=800   800w,
           /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=640   640w,
-          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=480   480w,
-          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=380   380w,
-          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=300   300w,
-          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=250   250w,
-          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=200   200w
+          /src/assets/imagenes/presentacion/banner_presentacion.jpg?width=480   480w
+          
         "
         sizes="(max-width: 1140px) 80vw, 1140px"
+        width="1200"
+        height="208"
       />
     </div>
     <main class="presentacion">
@@ -124,8 +124,11 @@
             fotografías y más.
           </p>
         </section>
-        <div class="contenedor_flotado">
-          <figure class="elemento_flotado_l detalle">
+        <div class="contenedor_flotado" >
+          <div class="imagen_flotado">
+            
+          
+          <figure class="elemento_flotado_l detalle" >
             <picture>
               <source
                 media="(min-width: 769px)"
@@ -201,6 +204,7 @@
               >, via Wikimedia Commons
             </figcaption>
           </figure>
+        </div>
           <p>
             The Rolling Stones, más conocido en el mundo hispanohablante como
             los Rolling Stones, es un grupo británico de
@@ -261,7 +265,7 @@
                 <span class="lyt-visually-hidden">Out of Control</span>
               </a>
             </lite-youtube>
-            <lite-youtube videoid="SGyOaCXr8Lw" style="background-image: url('./assets/imagenes/presentacion/startmeup.jpeg');">
+            <lite-youtube videoid="SGyOaCXr8Lw" style="background-image: url('./assets/imagenes/presentacion/startmeup.webp');">
               <a href="https://youtube.com/watch?v=SGyOaCXr8Lw" class="lty-playbtn" title="Play Video">
                 <span class="lyt-visually-hidden">Out of Control</span>
               </a>

@@ -1298,6 +1298,9 @@ footer p {
 div.contenedor_flotado {
   margin-top: 3rem;
 }
+.imagen_flotado {
+  width: 80vw;
+}
 .elemento_flotado_r,
 .elemento_flotado_l {
   margin-bottom: 1rem;
@@ -1476,6 +1479,9 @@ div.contenedor_flotado {
   .elemento_flotado_l {
     float: left;
     margin-right: 2rem;
+  }
+  .imagen_flotado {
+    width: 50%;
   }
 }
 /************************************************************************
