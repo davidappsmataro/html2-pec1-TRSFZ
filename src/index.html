@@ -15,23 +15,7 @@
       sizes="512x512"
       href="assets/imagenes/favicon/favicon3.png"
     />
-
-    <link
-      rel="preload"
-      href="/src/assets/fonts/inspiration/inspiration-regular-webfont.woff2"
-      as="font"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/src/assets/fonts/roboto/roboto-light-webfont.woff2"
-      as="font"
-      crossorigin
-    />
-    <link rel="preload" href="/src/assets/fonts/inspiration/inspiration-regular-webfont.woff2" as="font" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/roboto/roboto-italic-webfont.woff2" as="font" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff2" as="font" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/roboto/roboto-medium-webfont.woff2" as="font" crossorigin>
+  <!--   <include src="./src/components/fuentes.html"></include> -->
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -80,8 +64,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1500"
-                    height="849"
                   />
                   <source
                     media="(min-width: 997px), (max-height: 600px) and (orientation: landscape)"
@@ -95,8 +77,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1500"
-                    height="849"
                   />
 
                   <source
@@ -112,8 +92,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1500"
-                    height="849"
                   />
 
                   <source
@@ -126,8 +104,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1000"
-                    height="1010"
                   />
                   <source
                     media="(min-width: 769px)"
@@ -139,8 +115,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1000"
-                    height="1010"
                   />
                   <source
                     media="(min-width: 769px)"
@@ -152,8 +126,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1000"
-                    height="1010"
                   />
                   <source
                     media="(max-width: 768px)"
@@ -164,8 +136,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="960"
-                    height="1282"
                   />
 
                   <source
@@ -177,8 +147,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="960"
-                    height="1282"
                   />
                   <source
                     media="(max-width: 768px)"
@@ -189,16 +157,14 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="960"
-                    height="1282"
                   />
 
                   <img
                     src="assets/imagenes/portada/Rolling_portada_2.jpg"
                     alt="Imagen de los integrantes de la banda de los Rolling Stones"
+                    loading="lazy"
                     width="3000"
                     height="1697"
-                    fetchpriority="high"
                   />
                 </picture>
               </li>
@@ -223,7 +189,6 @@
                           class="clip_image"
                           src="/src/assets/imagenes/sala/concert-3387324_320.jpg"
                           alt="Escenario de fondo con genete disfrutando del concierto"
-                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -260,7 +225,6 @@
                         "
                         sizes="(max-width: 480px) and (min-height: 800px) 280px, (max-width: 768px) and (min-height: 800px) 300px, (min-width: 769px)  and (min-height: 800px) 380px, 200px"
                         alt="Imágen de Mick Jagger promocionando la Sala de conciertos"
-                        loading="lazy"
                       />
                     </picture>
                   </a>
@@ -278,8 +242,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1500"
-                    height="1125"
                   />
                   <source
                     media="(min-width: 1201px)"
@@ -293,8 +255,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1500"
-                    height="1125"
                   />
                   <source
                     media="(min-width: 1201px)"
@@ -308,8 +268,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1500"
-                    height="1125"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -324,8 +282,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1200"
-                    height="1267"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -340,8 +296,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1200"
-                    height="1267"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -356,8 +310,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1200"
-                    height="1267"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -372,8 +324,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="960"
-                    height="1672"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -388,8 +338,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="960"
-                    height="1672"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -404,15 +352,10 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="960"
-                    height="1672"
                   />
                   <img
                     src="assets/imagenes/portada/Rolling_portada_1.jpg"
                     alt="en concierto"
-                    width="4608"
-                    height="3456"
-                    loading="lazy"
                   />
                 </picture>
               </li>
@@ -441,8 +384,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1875"
-                    height="1406"
                   />
                   <source
                     media="(min-width: 1201px), (max-height: 600px) and (orientation: landscape)"
@@ -455,8 +396,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1875"
-                    height="1406"
                   />
                   <source
                     media="(min-width: 1201px), (max-height: 600px) and (orientation: landscape)"
@@ -469,8 +408,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1875"
-                    height="1406"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -483,8 +420,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="1200"
-                    height="1279"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -497,8 +432,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="1200"
-                    height="1279"
                   />
                   <source
                     media="(min-width: 993px)"
@@ -511,8 +444,6 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="1200"
-                    height="1279"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -524,8 +455,6 @@
                     "
                     sizes="100vw"
                     type="image/avif"
-                    width="960"
-                    height="1282"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -537,8 +466,6 @@
                     "
                     sizes="100vw"
                     type="image/webp"
-                    width="960"
-                    height="1282"
                   />
                   <source
                     media="(max-width: 992px)"
@@ -550,15 +477,13 @@
                     "
                     sizes="100vw"
                     type="image/jpeg"
-                    width="960"
-                    height="1282"
                   />
                   <img
                     src="assets/imagenes/portada/Rolling_portada_3.jpg"
                     alt="Imagen de un concierto con la gente esperando y el escenario con el logo de los Rolling stones conmemorando 50 aniversario."
+                    loading="lazy"
                     width="3000"
                     height="2250"
-                    loading="lazy"
                   />
                 </picture>
               </li>
