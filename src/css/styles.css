@@ -4,134 +4,137 @@
   FUENTES
   *****************************/
 
-
 @font-face {
-  font-family: 'Inspiration';
-  src: url('/src/assets/fonts/inspiration/inspiration-regular-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/inspiration/inspiration-regular-webfont.woff') format('woff');
+  font-family: "Inspiration";
+  src: url("/src/assets/fonts/inspiration/inspiration-regular-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/inspiration/inspiration-regular-webfont.woff")
+      format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-black-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-black-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-black-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-black-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-blackitalic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-blackitalic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-blackitalic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-blackitalic-webfont.woff")
+      format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-bold-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-bold-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff")
+      format("woff");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-italic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-italic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-italic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-light-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-light-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-light-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-
 }
 
-
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-lightitalic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-lightitalic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-lightitalic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-lightitalic-webfont.woff")
+      format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-medium-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-medium-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-medium-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-mediumitalic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-mediumitalic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-mediumitalic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-mediumitalic-webfont.woff")
+      format("woff");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Regular';
-  src: url('/src/assets/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-regular-webfont.woff') format('woff');
+  font-family: "Regular";
+  src: url("/src/assets/fonts/roboto/roboto-regular-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-thin-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-thin-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-thin-webfont.woff2") format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-thin-webfont.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('/src/assets/fonts/roboto/roboto-thinitalic-webfont.woff2') format('woff2'),
-       url('/src/assets/fonts/roboto/roboto-thinitalic-webfont.woff') format('woff');
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/roboto/roboto-thinitalic-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/roboto/roboto-thinitalic-webfont.woff")
+      format("woff");
   font-weight: 100;
   font-style: italic;
   font-display: swap;
-
 }
 
 /****************************
@@ -327,6 +330,9 @@ iframe.youtube {
   height: auto;
   aspect-ratio: 16/9;
   border: 0;
+  margin-bottom: 2rem;
+}
+lite-youtube {
   margin-bottom: 2rem;
 }
 main {
@@ -1235,7 +1241,6 @@ footer p {
   *****************************/
 .audio {
   z-index: 900;
-  
 }
 .info_audio {
   z-index: 900;
@@ -1343,7 +1348,6 @@ div.contenedor_flotado {
 .borde_grueso_imagen {
   border: 15px solid var(--primary-color);
 }
-
 
 @media (min-width: 530px) {
   /****************************

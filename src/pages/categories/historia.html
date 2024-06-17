@@ -16,8 +16,10 @@
       href="/src/assets/imagenes/favicon/favicon3.png"
     />
     <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="/src/css/lite-yt-embed.css" />
     <include src="./src/components/scripts.html"></include>
     <script type="module" src="/src/js/newsletter.js"></script>
+    <script src="/src/js/lite-yt-embed.js" async></script>
   </head>
   <body>
     <include src="./src/components/header.html"></include>
@@ -60,6 +62,7 @@
                   alt="Foto en blanco y negro del grupo en la pista del aeropueto con mucha gente"
                   width="800"
                   height="600"
+                  fetchpriority="high"
                 />
               </picture>
               <figcaption>
@@ -147,7 +150,7 @@
               buena legión de seguidores y su primer contrato discográfico con
               el sello <strong>Decca Records</strong>.
             </p>
-            <div class="getty">
+            <!--  <div class="getty">
               <a
                 id="_G-S9Ra7S1ZOq6_RfPAlow"
                 class="gie-slideshow"
@@ -186,7 +189,7 @@
                 charset="utf-8"
                 async
               ></script>
-            </div>
+            </div> -->
             <p>
               Con su primer sencillo,
               <span lang="en" class="titulos_musicales">I went to be loved</span
@@ -233,7 +236,7 @@
                 >(I can get no) Satisfaction</span
               >.
             </p>
-            <iframe
+            <!-- <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/qAzqSYQ9X9U?si=EnBpnB1DMLL6YvHa"
@@ -243,7 +246,13 @@
               allowfullscreen
               class="youtube"
               loading="lazy"
-            ></iframe>
+              
+            ></iframe> -->
+            <lite-youtube videoid="qAzqSYQ9X9U" style="background-image: url('/src/assets/imagenes/categorias/satisfaction.webp');">
+              <a href="https://youtube.com/watch?v=qAzqSYQ9X9U" class="lty-playbtn" title="Play Video">
+                <span class="lyt-visually-hidden">Out of Control</span>
+              </a>
+            </lite-youtube>
             <p>
               A partir de este momento se aprecia una nueva etapa en el grupo,
               que comenzó a componer temas más controvertidos con críticas a
@@ -368,7 +377,7 @@
               grupo en 1993 y Charlie Watts falleció en 2021, siendo sustituido
               por Steve Jordan).
             </p>
-            <iframe
+            <!-- <iframe
               width="560"
               height="315"
               src="https://www.youtube.com/embed/AczQDwH97CM?si=y5jJNGZwqI31kVoh"
@@ -378,7 +387,12 @@
               allowfullscreen
               class="youtube"
               loading="lazy"
-            ></iframe>
+            ></iframe> -->
+            <lite-youtube videoid="AczQDwH97CM" style="background-image: url('/src/assets/imagenes/categorias/million.webp');">
+              <a href="https://youtube.com/watch?v=AczQDwH97CM" class="lty-playbtn" title="Play Video">
+                <span class="lyt-visually-hidden">Out of Control</span>
+              </a>
+            </lite-youtube>
             <p>
               Los Rolling Stones pasarán a la historia como unos de los artistas
               más grandes de todos los tiempos según la revista Rolling Stone,

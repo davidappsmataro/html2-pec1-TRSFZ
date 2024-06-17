@@ -16,8 +16,10 @@
       href="/src/assets/imagenes/favicon/favicon3.png"
     />
     <link rel="stylesheet" href="/src/css/styles.css" />
+    <link rel="stylesheet" href="/src/css/lite-yt-embed.css" />
     <include src="./src/components/scripts.html"></include>
     <script type="module" src="/src/js/newsletter.js"></script>
+    <script src="/src/js/lite-yt-embed.js" async></script>
   </head>
   <body>
     <include src="./src/components/header.html"></include>
@@ -59,6 +61,7 @@
                   alt="Portada del disco Sticky Fingers donde aparece unos tejanos y el logo de los Rolling"
                   width="800"
                   height="600"
+                  fetchpriority="high"
                 />
               </picture>
               <figcaption>
@@ -622,7 +625,35 @@
                 así como promoción cruzada con varios equipos deportivos.
               </p>
               <div class="grid-videos">
-                <iframe
+                <lite-youtube
+                  videoid="_mEC54eTuGw"
+                  style="
+                    background-image: url('/src/assets/imagenes/categorias/hackneygirl.webp');
+                  "
+                >
+                  <a
+                    href="https://www.youtube.com/watch?v=_mEC54eTuGw"
+                    class="lty-playbtn"
+                    title="Play Video"
+                  >
+                    <span class="lyt-visually-hidden">Out of Control</span>
+                  </a>
+                </lite-youtube>
+                <lite-youtube
+                  videoid="NSzJhzfDtS4"
+                  style="
+                    background-image: url('/src/assets/imagenes/categorias/entrevista.webp');
+                  "
+                >
+                  <a
+                    href="https://youtube.com/watch?v=NSzJhzfDtS4"
+                    class="lty-playbtn"
+                    title="Play Video"
+                  >
+                    <span class="lyt-visually-hidden">Out of Control</span>
+                  </a>
+                </lite-youtube>
+               <!--  <iframe
                   width="560"
                   height="315"
                   src="https://www.youtube.com/embed/_mEC54eTuGw?si=lyfcLtQdu5sQKGl-"
@@ -643,7 +674,7 @@
                   allowfullscreen
                   class="youtube"
                   loading="lazy"
-                ></iframe>
+                ></iframe> -->
               </div>
             </section>
           </article>
