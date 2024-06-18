@@ -16,7 +16,7 @@
       href="/src/assets/imagenes/favicon/favicon3.png"
     />
     <link rel="stylesheet" href="/src/css/styles.css" />
-    
+
     <include src="./src/components/scripts.html"></include>
     <script src="/src/js/paginacion.js"></script>
     <script type="module" src="/src/js/newsletter.js"></script>
@@ -44,10 +44,11 @@
                   "
                   sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
                   type="image/webp"
-                  fetchpriority="high"
-                
+                  width="800"
+                  height="600"
                 />
-                <img fetchpriority="high"
+                <img
+                  fetchpriority="high"
                   class="img_fluid borde_grueso_imagen"
                   src="/src/assets/imagenes/categorias/cat-Noticias.jpg"
                   srcset="
@@ -61,7 +62,6 @@
                   "
                   sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
                   alt="Imagen del logotipo de los Rolling Stones hecho de neones."
-                  
                   width="800"
                   height="600"
                 />
@@ -94,6 +94,8 @@
                         "
                         sizes="170px"
                         type="image/webp"
+                        width="200"
+                        height="133"
                       />
                       <source
                         media="(min-width: 481px)"
@@ -120,6 +122,8 @@
                         "
                         sizes="calc(80vw - 20px)"
                         type="image/webp"
+                        width="385"
+                        height="255"
                       />
                       <img
                         class="img_fluid"
@@ -270,7 +274,7 @@
                       alt="Imagen de Los Rolling Stones posando con una camiseta del FCBarcelona"
                       loading="lazy"
                       width="640"
-                      height="480"
+                      height="360"
                     />
                   </picture>
                 </div>
@@ -338,7 +342,7 @@
                       alt="Imagen de Mick Jagger tocando la guitarra en concierto"
                       loading="lazy"
                       width="640"
-                      height="480"
+                      height="361"
                     />
                   </picture>
                 </div>
@@ -405,7 +409,7 @@
                       alt="Imagen Mick Jagger y Lady Gaga cantando juntos"
                       loading="lazy"
                       width="640"
-                      height="480"
+                      height="385"
                     />
                   </picture>
                 </div>
@@ -624,6 +628,5 @@
       <include src="./src/components/newsletter.html"></include>
     </main>
     <include src="./src/components/footer.html"></include>
-   
   </body>
 </html>
