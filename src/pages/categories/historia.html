@@ -31,47 +31,49 @@
             <header>
               <h1>Historia de los Rolling Stones</h1>
             </header>
-            <figure>
-              <picture>
-                <source
-                  srcset="
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp           800w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=640 640w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=480 480w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=380 380w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=300 300w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=250 250w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=200 200w
-                  "
-                  sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
-                  type="image/webp"
-                />
-                <img
-                  class="img_fluid borde_grueso_imagen"
-                  src="/src/assets/imagenes/categorias/cat-grupo.jpg"
-                  srcset="
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=800 800w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=640 640w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=480 480w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=380 380w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=300 300w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=250 250w,
-                    /src/assets/imagenes/categorias/cat-historia.jpg?width=200 200w
-                  "
-                  sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
-                  alt="Foto en blanco y negro del grupo en la pista del aeropueto con mucha gente"
-                  width="800"
-                  height="600"
-                  fetchpriority="high"
-                />
-              </picture>
-              <figcaption>
-                <a
-                  href="https://commons.wikimedia.org/wiki/File:The_Rolling_Stones_p%C3%A5_Fornebu,_1965.jpg"
-                  >Øderud</a
-                >, No restrictions, via Wikimedia Commons
-              </figcaption>
-            </figure>
+            <div class="imagen_principal">
+              <figure>
+                <picture>
+                  <source
+                    srcset="
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp           800w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=640 640w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=480 480w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=380 380w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=300 300w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=250 250w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?as=webp&width=200 200w
+                    "
+                    sizes="(max-width: 992px) 80vw, (max-width: 1200px) 60vw, 800px"
+                    type="image/webp"
+                  />
+                  <img
+                    class="img_fluid borde_grueso_imagen"
+                    src="/src/assets/imagenes/categorias/cat-grupo.jpg"
+                    srcset="
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=800 800w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=640 640w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=480 480w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=380 380w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=300 300w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=250 250w,
+                      /src/assets/imagenes/categorias/cat-historia.jpg?width=200 200w
+                    "
+                    sizes="(max-width: 992px) 80vw, (max-width: 1200px) 60vw, 800px"
+                    alt="Foto en blanco y negro del grupo en la pista del aeropueto con mucha gente"
+                    width="800"
+                    height="600"
+                    fetchpriority="high"
+                  />
+                </picture>
+                <figcaption>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:The_Rolling_Stones_p%C3%A5_Fornebu,_1965.jpg"
+                    >Øderud</a
+                  >, No restrictions, via Wikimedia Commons
+                </figcaption>
+              </figure>
+            </div>
             <div class="intro">
               <p>
                 <strong>The Rolling Stones</strong> es una de las bandas de rock
@@ -248,8 +250,17 @@
               loading="lazy"
               
             ></iframe> -->
-            <lite-youtube videoid="qAzqSYQ9X9U" style="background-image: url('/src/assets/imagenes/categorias/satisfaction.webp');">
-              <a href="https://youtube.com/watch?v=qAzqSYQ9X9U" class="lty-playbtn" title="Play Video">
+            <lite-youtube
+              videoid="qAzqSYQ9X9U"
+              style="
+                background-image: url('/src/assets/imagenes/categorias/satisfaction.webp');
+              "
+            >
+              <a
+                href="https://youtube.com/watch?v=qAzqSYQ9X9U"
+                class="lty-playbtn"
+                title="Play Video"
+              >
                 <span class="lyt-visually-hidden">Out of Control</span>
               </a>
             </lite-youtube>
@@ -388,8 +399,17 @@
               class="youtube"
               loading="lazy"
             ></iframe> -->
-            <lite-youtube videoid="AczQDwH97CM" style="background-image: url('/src/assets/imagenes/categorias/million.webp');">
-              <a href="https://youtube.com/watch?v=AczQDwH97CM" class="lty-playbtn" title="Play Video">
+            <lite-youtube
+              videoid="AczQDwH97CM"
+              style="
+                background-image: url('/src/assets/imagenes/categorias/million.webp');
+              "
+            >
+              <a
+                href="https://youtube.com/watch?v=AczQDwH97CM"
+                class="lty-playbtn"
+                title="Play Video"
+              >
                 <span class="lyt-visually-hidden">Out of Control</span>
               </a>
             </lite-youtube>

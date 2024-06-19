@@ -20,7 +20,7 @@
     <link rel="preload" href="/src/assets/fonts/roboto/roboto-bolditalic-webfont.woff2" as="font" crossorigin>
     <link rel="preload" href="/src/assets/fonts/roboto/roboto-medium-webfont.woff2" as="font" crossorigin>
     <link rel="preload" href="/src/assets/fonts/roboto/roboto-light-webfont.woff2" as="font" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/roboto/roboto-regular-webfont.woff2" as="font" crossorigin>
+    <!-- <link rel="preload" href="/src/assets/fonts/roboto/roboto-regular-webfont.woff2" as="font" crossorigin> -->
     <link rel="preload" href="/src/assets/fonts/roboto/roboto-bold-webfont.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="/src/css/styles.css" />
     <link rel="stylesheet" href="/src/css/lite-yt-embed.css" />
@@ -37,6 +37,9 @@
             <header>
               <h1>DISCOGRAFÍA DE LOS ROLLING STONES</h1>
             </header>
+            <div class="imagen_principal">
+
+           
             <figure>
               <picture>
                 <source
@@ -49,9 +52,11 @@
                     /src/assets/imagenes/categorias/cat-Discografia.jpg?as=webp&width=250 250w,
                     /src/assets/imagenes/categorias/cat-Discografia.jpg?as=webp&width=200 200w
                   "
-                  sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
+                  sizes="(max-width: 992px) 80vw, (max-width: 1200px) 60vw, 800px"
+                  
                   type="image/webp"
-                />
+                  
+                  />
                 <img
                   class="img_fluid borde_grueso_imagen"
                   src="/src/assets/imagenes/categorias/cat-Discografia.jpg"
@@ -64,12 +69,13 @@
                     /src/assets/imagenes/categorias/cat-Discografia.jpg?width=250 250w,
                     /src/assets/imagenes/categorias/cat-Discografia.jpg?width=200 200w
                   "
-                  sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px"
+                  sizes="(max-width: 992px) 80vw, (max-width: 1200px) 60vw, 800px"
                   alt="Portada del disco Sticky Fingers donde aparece unos tejanos y el logo de los Rolling"
                   width="800"
                   height="600"
                   fetchpriority="high"
                 />
+                <!-- sizes="(max-width: 992px) calc(80vw - 30px), (max-width: 1425px) calc(((80vw / 12) * 8) - 30px), 800px" -->
               </picture>
               <figcaption>
                 <a
@@ -81,6 +87,7 @@
                 >, via Wikimedia Commons
               </figcaption>
             </figure>
+          </div>
             <div class="intro">
               <p>
                 La discografía de <strong>The Rolling Stones</strong>, una banda
