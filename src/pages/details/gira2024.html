@@ -46,7 +46,6 @@
       as="font"
       crossorigin
     />
-    <!-- <link rel="preload" href="/src/assets/fonts/roboto/roboto-regular-webfont.woff2" as="font" crossorigin> -->
     <link
       rel="preload"
       href="/src/assets/fonts/roboto/roboto-bold-webfont.woff2"
@@ -76,7 +75,7 @@
             </h1>
           </header>
           <div class="imagen_flotado">
-            <figure class="elemento_flotado_l">
+            <figure class="elemento_flotado_l ">
               <picture>
                 <source
                   media="(min-width: 481px)"
@@ -88,9 +87,10 @@
                     /src/assets/imagenes/categorias/cat-Giras.jpg?as=webp&width=640   640w,
                     /src/assets/imagenes/categorias/cat-Giras.jpg?as=webp&width=480   480w
                   "
-                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) calc(80vw/1.6), (min-width: 1201px) calc(1140px / 2), 800px"
+                  sizes="(min-width: 1426px) 550px, (min-width: 769px) 40vw"
                   type="image/webp"
-                />
+                  />
+                <!--   sizes="(max-width: 768px) 80vw, (max-width: 1200px) calc(80vw/1.6), (min-width: 1201px) calc(1140px / 2), 800px" -->
                 <source
                   media="(max-width: 480px)"
                   srcset="
@@ -101,8 +101,10 @@
                     /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=385 385w,
                     /src/assets/imagenes/categorias/cat-Giras960B.jpg?as=webp&width=308 308w
                   "
-                  sizes="(max-width: 480px) 80vw, 960px"
+                  sizes="(max-width: 480px) 80vw"
                   type="image/webp"
+                  width="960"
+                  height="637"
                 />
                 <img
                   class="img_fluid"
